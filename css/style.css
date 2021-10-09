@@ -4,24 +4,21 @@
 /* >>>>>>> Font Weight / 400 <<<<<<< */
 @font-face {
   font-family: "Lucida Handwriting";
-  src: url("../fonts/dm-sans-latin-400.9566aaac2083dccdc16ea3f2f2135e59.woff2")
-    format("woff2");
+  src: url("../fonts/dm-sans-latin-400.9566aaac2083dccdc16ea3f2f2135e59.woff2") format("woff2");
   font-weight: 400;
 }
 
 /* >>>>>>> Font Weight / 500 <<<<<<< */
 @font-face {
   font-family: "Lucida Handwriting";
-  src: url("../fonts/dm-sans-latin-500.b50824fe4ff335be8c64463129658220.woff2")
-    format("woff2");
+  src: url("../fonts/dm-sans-latin-500.b50824fe4ff335be8c64463129658220.woff2") format("woff2");
   font-weight: 500;
 }
 
 /* >>>>>>> Font Weight / 700 <<<<<<< */
 @font-face {
   font-family: "Lucida Handwriting";
-  src: url("../fonts/dm-sans-latin-700.659104546f390e057efeda29343c29b1.woff2")
-    format("woff2");
+  src: url("../fonts/dm-sans-latin-700.659104546f390e057efeda29343c29b1.woff2") format("woff2");
   font-weight: 700;
 }
 
@@ -35,6 +32,78 @@
   font-family: "Lucida Handwriting";
 }
 
+/* >>>>>>>> Tagline <<<<<<<< */
+.--main-p-- {
+  margin: 0;
+  font-size: 14px;
+  font-weight: Bold;
+  text-transform: uppercase;
+  color: #ef9e48;
+  line-height: 1;
+  -webkit-letter-spacing: 2.1px;
+  -moz-letter-spacing: 2.1px;
+  -ms-letter-spacing: 2.1px;
+  letter-spacing: 2.1px;
+  margin-bottom: 12px;
+}
+
+/* >>>>>>>> Main Heading <<<<<<<< */
+.--main-h-- {
+  margin: 0;
+  font-size: 29px;
+  color: #0f2137;
+  font-weight: 700;
+  line-height: 1.53;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+/* >>>>>>>> Buttons <<<<<<<< */
+.--link-btn-- {
+  font-size: 16px !important;
+  font-weight: 700;
+  background: #fcf2e8 !important;
+  color: #ef9e48 !important;
+  border-radius: 5px;
+  padding: 14px 18px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.--link-btn--:hover {
+  color: #fcf2e8 !important;
+  background: #ef9e48 !important;
+  transition: 0.5s;
+}
+
+/* >>>>>>>> Video Play/Pause <<<<<<<< */
+.--video--tutorial-- {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.521);
+  transition: 0.7s;
+}
+.--video--tutorial--:hover {
+  background: #ef9e48;
+  transition: 0.7s;
+}
+.--video--tutorial-- i {
+  position: absolute;
+  display: block;
+  left: 54.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 33px;
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -45,7 +114,7 @@
   width: 100%;
   height: fit-content;
   transition: 0.3s;
-  z-index: 99999;
+  z-index: 9999999;
 }
 .--navigation--.fixed {
   background: white;
@@ -94,9 +163,15 @@
   background: #ef9e48 !important;
   transition: 0.5s;
 }
+.--navigation-- .--toggle-menu-- {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
   /* >>>>>>>> Navbar <<<<<<<< */
   .--navigation-- .navbar {
@@ -106,12 +181,23 @@
 }
 
 /* >>>>>> Media Query / Width / 1230px <<<<<<< */
-
 @media screen and (max-width: 1230px) {
   /* >>>>>>>> Navbar <<<<<<<< */
   .--navigation-- .navbar {
     padding: 0px 5px 0px 20px;
     width: 100%;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1230px <<<<<<< */
+@media screen and (max-width: 991px) {
+  .--navigation-- .--toggle-menu-- {
+    display: block;
+  }
+  .--navigation-- .logo {
+    width: fit-content !important;
+    position: absolute;
+    left: 20px;
   }
 }
 
@@ -166,12 +252,7 @@
   font-size: 85px;
   font-weight: bold;
 }
-.--hero--banner--
-  .container
-  .row
-  .--text--content--
-  .--main--heading--
-  .banner-text-line {
+.--hero--banner-- .container .row .--text--content-- .--main--heading-- .banner-text-line {
   width: 100%;
   text-align: right;
 }
@@ -222,9 +303,6 @@
 }
 
 /* >>>>>>> Banner Images <<<<<<< */
-.--hero--banner-- .container .row .--banner--images-- {
-  text-align: right;
-}
 .--hero--banner-- .container .row .--banner--images-- {
   text-align: right;
 }
@@ -325,7 +403,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1230px <<<<<<< */
-
 @media screen and (max-width: 1230px) {
   .--hero--banner-- .container {
     max-width: 100%;
@@ -345,8 +422,18 @@
 }
 
 /* >>>>>> Media Query / Width / 1200px <<<<<<< */
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
+  .--hero--banner-- {
+    height: 100%;
+  }
+  /* >>>>>>> Main Paragraph <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- .--main--para-- p br {
+    display: none;
+  }
+  /* >>>>>>> Form <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- form {
+    width: 100%;
+  }
   /* >>>>>>> Main Heading <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--main--heading-- h1 {
     font-size: 45px;
@@ -355,18 +442,56 @@
   .--hero--banner-- .container .row .--text--content-- .--main--heading-- img {
     display: none;
   }
-
   /* >>>>>>> Rating <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--rating-- {
     margin: 0px 0px 15px 0px;
   }
-
   /* >>>>>>> Sponsers <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--sponsers-- {
-    width: 70%;
+    width: 68%;
   }
   .--hero--banner-- .container .row .--text--content-- .--sponsers-- img {
     margin-top: 20px;
+  }
+  /* >>>>>>> Banner Images <<<<<<< */
+  .--hero--banner-- .container .row .--banner--images-- .--layers-- {
+    width: 100%;
+    height: fit-content;
+    border: 2px solid #ffdc6b;
+    padding: 0px 10px 12px 0px;
+    border-radius: 6px;
+    margin: 20px -20px 0px 0px;
+  }
+  .--hero--banner-- .container .row .--banner--images-- .layer-1 {
+    position: relative;
+    height: auto;
+    width: calc(100% + 20px);
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+  .--hero--banner-- .container .row .--banner--images-- .layer-3 {
+    display: none;
+  }
+  .--hero--banner-- .container .row .--banner--images-- .layer-4 {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--hero--banner-- {
+    height: fit-content;
+    padding-bottom: 0;
+  }
+  /* >>>>>>> Main Heading <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- .--main--heading-- h1 {
+    font-size: 36px;
+    padding-bottom: 10px;
+  }
+  .--hero--banner-- .container .row .--banner--images-- {
+    margin-top: 60px;
+  }
+  .--hero--banner-- .container .row .--banner--images-- .layer-2 {
+    top: -20px;
   }
 }
 
@@ -431,35 +556,17 @@
 /* >>>>>>>> Papular Tutorials <<<<<<<< */
 .--quality--features-- .container {
   text-align: center;
-  max-width: 1430px;
+  max-width: 1450px;
   height: fit-content;
-  padding: 120px 0px;
+  padding: 120px 0px 10px 0px;
 }
-
-/* >>>>>>>> Main Paragraph <<<<<<<< */
-.--quality--features-- .--main-p-- {
+.--quality--features-- .row {
+  max-width: 100%;
   margin: 0;
-  font-size: 14px;
-  font-weight: Bold;
-  text-transform: uppercase;
-  color: #ef9e48;
-  line-height: 1;
-  -webkit-letter-spacing: 2.1px;
-  -moz-letter-spacing: 2.1px;
-  -ms-letter-spacing: 2.1px;
-  letter-spacing: 2.1px;
-  margin-bottom: 12px;
+  padding: 0;
 }
-
-/* >>>>>>>> Main Heading <<<<<<<< */
-.--quality--features-- .--main-h-- {
-  margin: 0;
-  font-size: 29px;
-  color: #0f2137;
-  font-weight: 700;
-  line-height: 1.53;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
+.--quality--features-- .row .slide {
+  margin-left: 10px;
 }
 
 /* >>>>>>>> Tutorials <<<<<<<< */
@@ -469,6 +576,10 @@
   transition: 500ms;
   border: 1px solid #f3f4f5;
   border-radius: 5px;
+  margin-right: 20px !important;
+}
+.slick-list {
+  padding-bottom: 50px !important;
 }
 .--quality--features-- .--tutorials--:hover {
   box-shadow: 0px 15px 50px rgba(69, 88, 157, 0.1);
@@ -487,38 +598,6 @@
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-}
-.--quality--features-- .--tutorials-- .--course-image-- .--video--tutorial-- {
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
-  border-radius: 50%;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.521);
-  transition: 0.7s;
-}
-
-/* >>>>>>>> Course Images'/Video Icon <<<<<<<< */
-.--quality--features--
-  .--tutorials--
-  .--course-image--
-  .--video--tutorial--:hover {
-  background: #ef9e48;
-  transition: 0.7s;
-}
-.--quality--features-- .--tutorials-- .--course-image-- .--video--tutorial-- i {
-  position: absolute;
-  display: block;
-  left: 54.5%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  font-size: 33px;
 }
 .--quality--features-- .--tutorials-- .--tutorial--details-- {
   padding: 20px 30px 10px 30px;
@@ -548,6 +627,7 @@
 /* >>>>>>>> Views <<<<<<<< */
 .--quality--features-- .--tutorials-- .--views-- span {
   color: #797979;
+  display: flex;
 }
 
 /* >>>>>>>> Titles <<<<<<<< */
@@ -595,5 +675,877 @@
   .--quality--features-- .container {
     max-width: 100%;
     padding: 120px 20px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>> Core Features <<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--core--features-- {
+  position: relative;
+  height: fit-content;
+  padding: 120px 0px 150px 0px;
+}
+.--core--features-- .container .col-lg-7 {
+  width: 56.6%;
+  padding-left: 55px;
+  padding-right: 15px;
+}
+.--core--features-- .container .col-lg-5 {
+  padding-top: 70px;
+}
+.--core--features-- .--right-- h1 {
+  font-size: 48px;
+  color: #02073e;
+  line-height: 1.44;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+}
+.--core--features-- .--right-- p {
+  color: #02073e;
+  font-size: 18px;
+  line-height: 2.3;
+  margin: 25px 0px 45px 0px;
+}
+.--core--features-- .--right-- a {
+  color: #02073e;
+  text-decoration: none;
+  font-size: 18px;
+}
+.--core--features-- .--box-- {
+  box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  width: 280px;
+  text-align: center;
+  padding: 85px 20px;
+  margin-top: 45px;
+}
+.--core--features-- .--box-3-4-- {
+  margin-top: -70px;
+}
+.--core--features-- .--box-- h1 {
+  font-size: 72px;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+}
+.--core--features-- .--box-- p {
+  margin-top: 7px;
+  font-size: 18px;
+  color: #0f2137;
+  line-height: 1.39;
+  letter-spacing: -0.5px;
+  opacity: 0.7;
+  white-space: pre-line;
+  padding: 0px 30px;
+}
+.--core--features-- .--box--.--box-1-- h1 {
+  color: #ef9e48;
+}
+.--core--features-- .--box--.--box-2-- h1 {
+  color: #fa578e;
+}
+.--core--features-- .--box--.--box-3-- h1 {
+  color: #ff753a;
+}
+.--core--features-- .--box--.--box-4-- h1 {
+  color: #e682ff;
+}
+
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
+
+@media screen and (max-width: 1440px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- {
+    padding: 50px 0px 150px 0px;
+  }
+  .--core--features-- .container {
+    max-width: 1400px;
+  }
+  .--core--features-- .--right-- h1 {
+    font-size: 36px;
+  }
+  .--core--features-- .--box-- h1 {
+    font-size: 55px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1281px <<<<<<< */
+
+@media screen and (max-width: 1281px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- .--box-- {
+    margin-top: 35px;
+  }
+  .--core--features-- .container .col-lg-7 {
+    width: 56.6%;
+    padding-left: 10px;
+    padding-right: 25px;
+  }
+  .--core--features-- .--box-- h1 {
+    font-size: 36px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>> Designing Courses <<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--designing-courses-- {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.--designing-courses-- .--main-h-- {
+  margin-bottom: 60px;
+}
+.--designing-courses-- .container {
+  width: 1200px;
+}
+
+/* >>>>>>>>>> Courses <<<<<<< */
+.--designing-courses-- .--course-- {
+  position: relative;
+  height: fit-content;
+  padding: 25px 40px 25px 40px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #f3f4f5;
+}
+.--designing-courses-- .--courses-- {
+  display: flex;
+  align-items: center;
+}
+.--designing-courses-- .--course-- .--video--and--course--details-- {
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+/* >>>>>>>>>> Heading <<<<<<< */
+.--designing-courses-- .--course-- h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+  line-height: 1.36;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.--designing-courses-- .--course-- h4 a {
+  text-decoration: none;
+  transition: 0.5s;
+  color: unset;
+}
+.--designing-courses-- .--course-- h4 a:hover {
+  transition: 0.5s;
+  color: rgba(239, 158, 72, 1);
+}
+
+/* >>>>>>>>>> Paragraph <<<<<<< */
+.--designing-courses-- .--course-- p {
+  font-size: 15px;
+  color: #5d646d;
+}
+
+/* >>>>>>>> Video Play/Pause <<<<<<<< */
+.--designing-courses-- .--course-- .--video--tutorial-- {
+  position: relative;
+  top: unset;
+  left: unset;
+  transform: unset;
+  background: rgba(239, 158, 72, 0.07);
+  transition: 0.5s;
+  margin-right: 40px;
+}
+.--designing-courses-- .--course-- .--video--tutorial-- i {
+  color: #ef9e48;
+  transition: 0.5s;
+}
+.--designing-courses-- .--course-- .--video--tutorial--:hover {
+  background: #ef9e48;
+  transition: 0.5s;
+}
+.--designing-courses-- .--course-- .--video--tutorial--:hover i {
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* >>>>>>>> Rating <<<<<<<< */
+.--designing-courses-- .--course-- .--rating-- {
+  margin: 10px 0px;
+}
+.--designing-courses-- .--course-- .--rating-- i {
+  color: #ffd84c4f;
+  font-size: 14px;
+}
+.--designing-courses-- .--course-- .--rating-- i.fill-it {
+  color: #ffd84c;
+}
+.--designing-courses-- .--course-- .--rating-- span {
+  color: #797979;
+}
+.--designing-courses-- .--course-- .--rating-- img {
+  padding: 0px 10px;
+}
+
+/* >>>>>>>>>> Button <<<<<<< */
+.--designing-courses-- .--course-- .--course-hours-- {
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+}
+.--designing-courses-- .--course-- .--course-hours-- p i {
+  color: #797979;
+  font-size: 12px;
+}
+.--designing-courses-- .--course-- .--course-hours-- .--btn-- {
+  transition: 0.5s;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 6px;
+  background: #3fdbb1;
+  padding: 15px 20px;
+  font-weight: 700;
+}
+.--designing-courses-- .--course-- .--course-hours-- .--btn-- span {
+  font-weight: thin;
+  padding: 0px 5px;
+}
+.--designing-courses-- .--course-- .--course-hours-- .--btn--:hover {
+  background: #2fb994;
+}
+
+/* >>>>>>>>>> List <<<<<<< */
+.--designing-courses-- .--course-- .--key-points-- {
+  text-align: left;
+  padding-left: 130px;
+  margin-top: 10px;
+  display: none;
+}
+.--designing-courses-- .--course-- .--key-points-- ul {
+  padding: 0;
+}
+.--designing-courses-- .--course-- .--key-points-- ul li {
+  list-style-type: none;
+  list-style: none;
+  line-height: 35px;
+  display: table-row;
+  animation: mymove 1s;
+}
+.--designing-courses-- .--course-- .--key-points-- ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  content: "\f058";
+  font-weight: 600;
+  color: #b5c3cb;
+  padding-right: 10px;
+  display: table-cell;
+}
+.--designing-courses-- .--course--.active .--key-points-- {
+  display: block;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
+
+@media screen and (max-width: 1440px) {
+  /* >>>>>>>>>>>> Designing Courses <<<<<<<<< */
+  .--designing-courses-- .--course-- {
+    padding: 25px 30px 25px 30px;
+  }
+  .--designing-courses-- .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>> How It Works  <<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--how-it-works-- {
+  text-align: center;
+  margin: 50px 0px;
+  padding: 100px 0px 80px 0px;
+  background: linear-gradient(180deg, #ebf9ff 0%, #f6f6ff 100%);
+}
+.--how-it-works-- .container {
+  width: 1200px;
+}
+.--how-it-works-- .--steps-- {
+  text-align: left;
+}
+.--how-it-works-- .--steps-- .--directions-- {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  margin: 80px 0px 30px 0px;
+}
+.--how-it-works-- .--steps-- .--directions-- .--number-- {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 40%;
+  box-shadow: 0px 14px 20px rgba(76, 119, 171, 0.1);
+  color: black;
+  position: relative;
+  margin-right: 10px;
+}
+.--how-it-works-- .--steps-- .--directions-- .--number-- span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: 700;
+}
+.--how-it-works-- .--steps-- .--text-details-- h3 {
+  font-size: 22px;
+  line-height: 1.55;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.--how-it-works-- .--steps-- .--text-details-- p {
+  font-size: 15px;
+  line-height: 1.73;
+  font-weight: 400;
+  color: #343d48;
+}
+
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
+
+@media screen and (max-width: 1440px) {
+  /* >>>>>>>>>>>> How It Works  <<<<<<<<< */
+  .--how-it-works-- .--steps-- .--directions-- .--number--.first-three {
+    width: 78px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>> Pricing Plan  <<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--pricing--plan-- {
+  text-align: center;
+  padding: 50px 0px 90px 0px;
+}
+
+/*>>>>>> Switch Plans Buttons <<<<< */
+.--pricing--plan-- .--btns-- {
+  margin-bottom: 60px;
+}
+.--pricing--plan-- .--btns-- ul {
+  padding: 6px;
+  border-radius: 5px;
+  background: #f7f8fb;
+  display: flex;
+  list-style: none;
+  width: fit-content;
+  margin: 0 auto;
+}
+.--pricing--plan-- .--btns-- ul li {
+  padding: 13px 25px;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+}
+/*>>>>>> Active Plan <<<<< */
+.--pricing--plan-- .--btns-- ul li.active {
+  background: white;
+  box-shadow: 0px 3px 3.8px rgba(38, 78, 118, 0.1);
+}
+
+/*>>>>>> Pricing Plan <<<<< */
+.--pricing--plan-- .container {
+  text-align: left;
+  max-width: 1020px;
+}
+.--pricing--plan-- .--plans-- {
+  display: flex;
+  margin-left: 30px;
+}
+
+/*>>>>>> Plan Free/Premium <<<<< */
+.--pricing--plan-- .--plans-- .--plan-- {
+  position: relative;
+  padding: 62px 70px 50px 40px;
+  border: 1px solid #f3f4f5;
+  border-radius: 10px;
+}
+
+/*>>>>>> Recommended Plan <<<<< */
+.--pricing--plan-- .--plans-- .--recommened-- {
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #ef9e48;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+  width: fit-content;
+}
+.--pricing--plan-- .--plans--.animate .--recommened-- {
+  animation: fade 1s;
+}
+.--pricing--plan-- .--plans--.animate2 .--recommened-- {
+  animation: fade2 1s;
+}
+
+.--pricing--plan-- .--plans-- .--plan-- h3 {
+  font-size: 22px;
+  line-height: 23px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 12px;
+}
+.--pricing--plan-- .--plans--.animate h3 {
+  animation: fadeout 1.5s;
+}
+.--pricing--plan-- .--plans--.animate2 h3 {
+  animation: fadeout2 1.5s;
+}
+
+.--pricing--plan-- .--plans-- .--plan-- p {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 26px;
+  color: #343d48;
+}
+.--pricing--plan-- .--plans--.animate p {
+  animation: fadeout 1.5s;
+}
+.--pricing--plan-- .--plans--.animate2 p {
+  animation: fadeout2 1.5s;
+}
+
+/*>>>>>> Plan Free <<<<< */
+.--pricing--plan-- .--plans-- .--plan--.--free-plan-- p {
+  margin-bottom: 60px;
+}
+
+/*>>>>>> Plan Premium Name/Pricing <<<<< */
+.--pricing--plan-- .--plans-- .--plan--.--premium-plan-- {
+  padding: 20px 60px 50px 40px;
+}
+.--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- .--price-- {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+.--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- .--price-- p {
+  margin: 0;
+}
+.--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- .--price-- h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #25cb9e;
+}
+.--pricing--plan-- .--plans--.animate .--plan--.--premium-plan-- .--plan--price-- .--price-- h2 {
+  animation: fadeout 1.5s;
+}
+.--pricing--plan-- .--plans--.animate2 .--plan--.--premium-plan-- .--plan--price-- .--price-- h2 {
+  animation: fadeout2 1.5s;
+}
+
+/*>>>>>> Plan List Items <<<<< */
+.--pricing--plan-- .--plans-- .--plan-- ul {
+  padding: 0;
+  margin-bottom: 65px;
+}
+.--pricing--plan-- .--plans-- .--plan-- ul li {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 26px;
+  margin-bottom: 22px;
+  color: #343d48;
+  list-style: none;
+  padding-right: 25px;
+  padding-left: 30px;
+  position: relative;
+}
+.--pricing--plan-- .--plans--.animate .--plan-- ul li {
+  animation: fade 1s;
+}
+.--pricing--plan-- .--plans--.animate2 .--plan-- ul li {
+  animation: fade2 1s;
+}
+
+.--pricing--plan-- .--plans-- .--plan-- ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  font-weight: 600;
+  content: "\f058";
+  color: #25cb9e;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.--pricing--plan-- .--plans-- .--plan-- ul li.check::before {
+  content: "\f058";
+  color: #25cb9e;
+}
+.--pricing--plan-- .--plans-- .--plan-- ul li.uncheck {
+  color: #aebcd3;
+}
+.--pricing--plan-- .--plans-- .--plan-- ul li.uncheck::before {
+  content: "\f057";
+  color: #aebcd3;
+}
+
+.--pricing--plan-- .--plans-- .--plan--.--free-plan-- {
+  margin-right: 3%;
+}
+.--pricing--plan-- .--plans-- .--plan--.--premium-plan-- {
+  margin-left: 3%;
+  border: 2px solid #25cb9e;
+}
+
+/*>>>>>> Plan Subscription Button <<<<< */
+.--pricing--plan-- .--plans-- .--link-btn-- {
+  padding: 13px 48.5px;
+  display: table;
+  margin: 0 auto;
+}
+.--pricing--plan-- .--plans--.animate .--link-btn-- {
+  animation: fade 1s;
+}
+.--pricing--plan-- .--plans--.animate2 .--link-btn-- {
+  animation: fade2 1s;
+}
+
+/*>>>>>> Animations <<<<< */
+
+/*>>>>>> Just Hide/Show delay <<<<< */
+@keyframes fadeout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*>>>>>> Just Hide/Show delay <<<<< */
+@keyframes fadeout2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*>>>>>> bottom to top animation <<<<< */
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*>>>>>> bottom to top animation <<<<< */
+@keyframes fade2 {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>> Free Tutorials  <<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--free--tutorials-- {
+  position: relative;
+  height: fit-content;
+  padding: 120px 0px 150px 0px;
+}
+.--free--tutorials-- .container {
+  max-width: 90%;
+}
+.--free--tutorials-- .container .col-xl-7 {
+  width: 56.6%;
+}
+.--free--tutorials-- .container .col-xl-7 img {
+  width: 942px;
+}
+.--free--tutorials-- .container .col-xl-7 {
+  padding-left: 50px;
+  padding-right: 10px;
+}
+.--free--tutorials-- .container .col-xl-5 {
+  padding-top: 40px;
+  margin-left: -20px;
+}
+.--free--tutorials-- .--right-- h1 {
+  font-size: 48px;
+  color: #02073e;
+  line-height: 1.22;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+}
+.--free--tutorials-- .--right-- p {
+  color: #02073e;
+  font-size: 18px;
+  line-height: 2.3;
+  margin: 25px 0px 30px 0px;
+}
+.--free--tutorials-- .--link-btn-- {
+  background: #f8e7d583 !important;
+}
+.--link-btn--:hover {
+  background: #ef9e48 !important;
+}
+
+/* >>>>>> Media Query / Width / 1800px <<<<<<< */
+
+@media screen and (max-width: 1800px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- .container {
+    max-width: 100%;
+  }
+  .--free--tutorials-- .container .col-xl-7 {
+    width: 56.6%;
+  }
+  .--free--tutorials-- .container .col-xl-7 img {
+    width: 100%;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
+
+@media screen and (max-width: 1440px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- .container .col-xl-7 img {
+    position: relative;
+    width: 940px;
+    left: -180px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1300px <<<<<<< */
+
+@media screen and (max-width: 1300px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- .container .col-xl-7 img {
+    width: 900px;
+    left: -210px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1200px <<<<<<< */
+
+@media screen and (max-width: 1199px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- .container .col-xl-7 {
+    width: 100%;
+  }
+  .--free--tutorials-- .container .col-xl-7 img {
+    left: auto;
+    width: 100%;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>> About Us <<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--about--us-- {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px 0px 60px 0px;
+}
+.--about--us-- .container {
+  max-width: 900px;
+  text-align: left;
+  margin-top: 65px;
+}
+.--about--us-- .container .--f-a-q-- {
+  border-bottom: 1px solid #e6e6e6;
+}
+.--about--us-- .container input[type="checkbox"] {
+  display: none;
+}
+.--about--us-- .container .--wrap-- {
+  display: flex;
+  align-items: center;
+}
+.--about--us-- .container .--plus-minus-icon-- {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #3fdbb1;
+  border-radius: 50%;
+  margin: 0px 10px 0px 25px;
+}
+.--about--us-- .container .--plus-minus-icon-- .--the--icon--::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 5 Free";
+  font-size: 13px;
+  font-weight: 600;
+  content: "\f067";
+  color: white;
+}
+.--about--us-- .container .--question-- {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  padding: 20px 0px 20px 0px;
+}
+.--about--us-- .container .--question--::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 13px;
+  font-weight: 600;
+  content: "\f067";
+  color: white;
+  padding: 4px 5px;
+  background: #3fdbb1;
+  border-radius: 50%;
+  margin: 0px 10px 0px 25px;
+}
+.--about--us-- .container .faq-drawer__content-wrapper {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  padding-left: 56px;
+}
+.--about--us-- .container .faq-drawer__content-wrapper p {
+  font-size: var(--paragraph);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  color: #5d646d;
+}
+/* >>>>> it will make sure that only check item display <<<<< */
+.--toggle--.active + .--question-- + .faq-drawer__content-wrapper {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding: 5px 0px 15px 56px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.--toggle--.active + .--question--::before {
+  content: "\f068";
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>> Learn From <<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--learn--from-- {
+  position: relative;
+  text-align: center;
+  padding: 100px 0px 165px 0px;
+}
+.--learn--from-- h1 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+.--learn--from-- .--link-btn-- {
+  padding: 15px 25px;
+}
+
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
+
+@media screen and (max-width: 1440px) {
+  /* >>>>>>>>  Learn From  <<<<<<<< */
+  .--learn--from-- h1 {
+    font-size: 36px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Footer <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+footer {
+  position: relative;
+}
+footer .container {
+  max-width: 900px;
+  padding: 55px 5px 50px 5px;
+  border-top: 1px solid #e6e6e6;
+}
+footer .container ul {
+  list-style: none;
+  padding: 0;
+}
+footer .container ul li {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+footer .container ul li a {
+  text-decoration: none;
+  color: unset;
+}
+footer .container ul li a:hover {
+  text-decoration: none;
+  color: #ef9e48;
+}
+footer .container ul li:first-child {
+  font-size: 18px;
+  margin-bottom: 19px;
+  font-weight: 500;
+  line-height: 1.67;
+}
+footer .container ul li:last-child {
+  margin-bottom: 0px;
+}
+
+/* >>>>>> Media Query / Width / 992px <<<<<<< */
+
+@media screen and (max-width: 992px) {
+  /* >>>>>>>> Footer <<<<<<<< */
+  footer .container .row .col-lg-3:nth-child(3),
+  footer .container .row .col-lg-3:last-child {
+    margin-top: 20px;
   }
 }

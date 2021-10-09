@@ -13,6 +13,9 @@
     />
     <meta name="keywords" content="Online Courses" />
 
+    <!-- >>>  Slick Slider  <<<<-->
+    <link href="./slick/slick.css" rel="stylesheet" />
+
     <!-- >>> Fontawsome 5 | Used for icons <<< -->
     <link href="./font-awesome/css/all.css" rel="stylesheet" />
 
@@ -28,11 +31,9 @@
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
     <div class="--navigation--">
-      <nav class="navbar navbar-light navbar-expand-md justify-content-center">
+      <nav class="navbar navbar-light navbar-expand-lg justify-content-center">
         <!-- >>>>>>>>> Logo <<<<<<<< -->
-        <a href="/" class="navbar-brand d-flex w-50 mr-auto"
-          ><img src="./images/logo.svg" alt=""
-        /></a>
+        <a href="/" class="logo w-50 m-auto"><img src="./images/logo.svg" alt="" /></a>
 
         <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
           <!-- >>>>>>>>> Center <<<<<<<< -->
@@ -58,6 +59,21 @@
           </ul>
         </div>
       </nav>
+      <div class="--toggle-menu--">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          height="22px"
+          width="22px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"
+          ></path>
+        </svg>
+      </div>
     </div>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
@@ -67,7 +83,7 @@
     <div class="container-fluid --hero--banner--">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-md-6 col-lg-6">
             <div class="--text--content--">
               <!-- >>>>>>>>> Rating <<<<<<<< -->
               <div class="--rating--">
@@ -76,9 +92,7 @@
                 <i class="fas fa-star fill-it"></i>
                 <i class="fas fa-star fill-it"></i>
                 <i class="fas fa-star"></i>
-                &nbsp;&nbsp;<span
-                  >Trused by over <span>4,332</span> students</span
-                >
+                &nbsp;&nbsp;<span>Trused by over <span>4,332</span> students</span>
               </div>
               <!-- >>>>>>>>> Main Heading <<<<<<<< -->
               <div class="--main--heading--">
@@ -120,14 +134,13 @@
               <!-- >>>>>>>>> Partners <<<<<<<< -->
               <div class="--sponsers--">
                 <span
-                  >Sponsored by: &nbsp;&nbsp;&nbsp;
-                  <img src="./images/brands.svg" alt=""
+                  >Sponsored by: &nbsp;&nbsp;&nbsp; <img src="./images/brands.svg" alt=""
                 /></span>
               </div>
             </div>
           </div>
           <!-- >>>>>>>>> Banner Images <<<<<<<< -->
-          <div class="col-lg-6 --banner--images--">
+          <div class="col-md-6 col-lg-6 --banner--images--">
             <div class="--layers--">
               <img src="./images/banner-image-1.png" class="layer-1" alt="" />
               <img src="./images/banner-pattern.png" class="layer-2" alt="" />
@@ -162,12 +175,7 @@
           </svg>
         </div>
         <!-- >>>>>>>>> Video will be apend here <<<<<<<< -->
-        <iframe
-          id="myIframe"
-          src="about:blank#"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
+        <iframe id="myIframe" src="about:blank#" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -181,9 +189,9 @@
         <p class="--main-p--">Quality Features</p>
         <h3 class="--main-h--">Tutorials that people love most</h3>
         <!-- >>>>>>>>> All Tutorials <<<<<<<< -->
-        <div class="row">
+        <div class="row favourite-courses">
           <!-- >>>>>>>>> Tutorial # 1 <<<<<<<< -->
-          <div class="col-lg-6 col-xl-4">
+          <div class="slide">
             <div class="--tutorials--">
               <!-- >>>>>>>>> Tutorials Image <<<<<<<< -->
               <div class="--course-image--">
@@ -200,34 +208,26 @@
                   <i class="fas fa-star fill-it"></i>
                   <i class="fas fa-star fill-it"></i>
                   <i class="fas fa-star fill-it"></i>
-                  &nbsp;&nbsp;<span
-                    ><span>5.0</span> (<span>392</span> reviews)</span
-                  >
+                  &nbsp;&nbsp;<span><span>5.0</span> (<span>392</span> reviews)</span>
                 </div>
                 <!-- >>>>>>>>> Title <<<<<<<< -->
                 <div class="--titles--">
                   <h3>
-                    <a href=""
-                      >How to work with prototype design with adobe xd featuring
-                      tools</a
-                    >
+                    <a href="">How to work with prototype design with adobe xd featuring tools</a>
                   </h3>
                 </div>
                 <!-- >>>>>>>>> Views <<<<<<<< -->
                 <div class="--views--">
                   <span
-                    ><img
-                      src="./images/eye-2.svg"
-                      alt=""
-                    />&nbsp;&nbsp;&nbsp;<span>2,538</span> students
-                    watched</span
+                    ><img src="./images/eye-2.svg" alt="" />&nbsp;&nbsp;&nbsp;<span>2,538</span>
+                    &nbsp;students watched</span
                   >
                 </div>
               </div>
             </div>
           </div>
           <!-- >>>>>>>>> Tutorial # 2 <<<<<<<< -->
-          <div class="col-lg-6 col-xl-4">
+          <div class="slide">
             <div class="--tutorials--">
               <div class="--tutorials--">
                 <!-- >>>>>>>>> Tutorials Image <<<<<<<< -->
@@ -245,27 +245,21 @@
                     <i class="fas fa-star fill-it"></i>
                     <i class="fas fa-star fill-it"></i>
                     <i class="fas fa-star"></i>
-                    &nbsp;&nbsp;<span
-                      ><span>4.5</span> (<span>392</span> reviews)</span
-                    >
+                    &nbsp;&nbsp;<span><span>4.5</span> (<span>392</span> reviews)</span>
                   </div>
                   <!-- >>>>>>>>> Title <<<<<<<< -->
                   <div class="--titles--">
                     <h3>
                       <a href="">
-                        Create multiple artboard by using figma prototyping
-                        tools development</a
+                        Create multiple artboard by using figma prototyping tools development</a
                       >
                     </h3>
                   </div>
                   <!-- >>>>>>>>> Views <<<<<<<< -->
                   <div class="--views--">
                     <span
-                      ><img
-                        src="./images/eye-2.svg"
-                        alt=""
-                      />&nbsp;&nbsp;&nbsp;<span>3,532</span> students
-                      watched</span
+                      ><img src="./images/eye-2.svg" alt="" />&nbsp;&nbsp;&nbsp;<span>3,532</span>
+                      &nbsp;students watched</span
                     >
                   </div>
                 </div>
@@ -273,7 +267,7 @@
             </div>
           </div>
           <!-- >>>>>>>>> Tutorial # 3 <<<<<<<< -->
-          <div class="col-lg-6 col-xl-4">
+          <div class="slide">
             <div class="--tutorials--">
               <div class="--tutorials--">
                 <!-- >>>>>>>>> Tutorials Image <<<<<<<< -->
@@ -291,27 +285,21 @@
                     <i class="fas fa-star fill-it"></i>
                     <i class="fas fa-star fill-it"></i>
                     <i class="fas fa-star fill-it"></i>
-                    &nbsp;&nbsp;<span
-                      ><span>5.0</span> (<span>392</span> reviews)</span
-                    >
+                    &nbsp;&nbsp;<span><span>5.0</span> (<span>392</span> reviews)</span>
                   </div>
                   <!-- >>>>>>>>> Title <<<<<<<< -->
                   <div class="--titles--">
                     <h3>
                       <a href=""
-                        >Convert your web layout theming easily with sketch
-                        zeplin extension</a
+                        >Convert your web layout theming easily with sketch zeplin extension</a
                       >
                     </h3>
                   </div>
                   <!-- >>>>>>>>> Views <<<<<<<< -->
                   <div class="--views--">
                     <span
-                      ><img
-                        src="./images/eye-2.svg"
-                        alt=""
-                      />&nbsp;&nbsp;&nbsp;<span>1,037</span> students
-                      watched</span
+                      ><img src="./images/eye-2.svg" alt="" />&nbsp;&nbsp;&nbsp;<span>1,037</span>
+                      &nbsp;students watched</span
                     >
                   </div>
                 </div>
@@ -322,8 +310,778 @@
       </div>
     </div>
 
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>> Core Features <<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--core--features--">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="container">
+              <div class="row --left--">
+                <div class="col-lg-6">
+                  <!-- Box 1 -->
+                  <div class="--box-- --box-1--">
+                    <h1>80K+</h1>
+                    <p>We have more than students</p>
+                  </div>
+                  <!-- Box 2 -->
+                  <div class="--box-- --box-2--">
+                    <h1>90+</h1>
+                    <p>Daily updated blog post maintain</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 --box-3-4--">
+                  <!-- Box 3 -->
+                  <div class="--box-- --box-3--">
+                    <h1>150+</h1>
+                    <p>Free online tutorials videos avaialble</p>
+                  </div>
+                  <!-- Box 4 -->
+                  <div class="--box-- --box-4--">
+                    <h1>& 3M</h1>
+                    <p>Job posted everydays with qualification</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="--right--">
+              <!-- Tagline -->
+              <h6 class="--main-p--">CORE FEATURES</h6>
+              <!-- Heading -->
+              <h1>
+                Smart Jackpots <br />
+                that you may love this <br />
+                anytime & anywhere
+              </h1>
+              <!-- Paragraph -->
+              <p>
+                Get your tests delivered at let home collect sample <br />
+                from the victory of the managments that supplies <br />
+                best design system guidelines ever. Get your tests <br />
+                delivered at let home collect sample.
+              </p>
+              <a href="#" class="--link-btn--">Explore details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>> Designing Courses <<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--designing-courses--">
+      <!-- >>>>>>>>> Tagline <<<<<<<< -->
+      <p class="--main-p--">Quality Features</p>
+      <!-- >>>>>>>>> Main Heading <<<<<<<< -->
+      <h3 class="--main-h--">Popular Designing Course</h3>
+      <div class="container">
+        <!-- >>>>>>>>> Courses <<<<<<<< -->
+
+        <!-- >>>>>>>>> Course # 1 <<<<<<<< -->
+        <div class="--course-- --course-1--">
+          <div class="--courses--">
+            <div class="--video--and--course--details--">
+              <div class="--video--tutorial-- --video--button--">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="--course-details--">
+                <!-- >>>>>>>>> Rating/Views <<<<<<<< -->
+                <div class="--rating--">
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  &nbsp;&nbsp;<span
+                    >5.0 (<span>392 reviews</span>)
+                    <span><img src="./images/eye-2.svg" alt="" /></span>
+                    <span>2,538</span> students watched</span
+                  >
+                </div>
+
+                <!-- >>>>>>>>> Heading <<<<<<<< -->
+                <h4>
+                  <a href="#"
+                    >Professional graphic design tutorial full course with exercise file</a
+                  >
+                </h4>
+
+                <!-- >>>>>>>>> Paragraph <<<<<<<< -->
+                <p>
+                  Get your tutorials delivered at let home collect sample from the victory of the
+                  managments.
+                </p>
+              </div>
+            </div>
+            <div class="--course-hours--">
+              <!-- >>>>>>>>> Toggle list <<<<<<<< -->
+              <p class="toggle-list">
+                <span class="--btn--">7 Video Classes <span>|</span> 4 hrs </span>
+                &nbsp;&nbsp;
+                <i class="fas fa-chevron-down"></i>
+              </p>
+            </div>
+          </div>
+          <!-- >>>>>>>>> List <<<<<<<< -->
+          <div class="--key-points--">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to reduce file pixel dimentions without loosing quality</li>
+                  <li>Create vector file from restarize layer styles</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to make logo pixel perfects with different extension</li>
+                  <li>Make color gradient with photoshop build-in tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- >>>>>>>>>>>>> End <<<<<<<<<<< -->
+
+        <!-- >>>>>>>>> Course # 2 <<<<<<<< -->
+        <div class="--course-- --course-1--">
+          <div class="--courses--">
+            <div class="--video--and--course--details--">
+              <div class="--video--tutorial-- --video--button--">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="--course-details--">
+                <!-- >>>>>>>>> Rating/Views <<<<<<<< -->
+                <div class="--rating--">
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star"></i>
+                  &nbsp;&nbsp;<span
+                    >4.5 (<span>524 reviews</span>)
+                    <span><img src="./images/eye-2.svg" alt="" /></span>
+                    <span>2,532</span> students watched</span
+                  >
+                </div>
+
+                <!-- >>>>>>>>> Heading <<<<<<<< -->
+                <h4>
+                  <a href="#">Become ultimate photoshop expert within 30 days</a>
+                </h4>
+
+                <!-- >>>>>>>>> Paragraph <<<<<<<< -->
+                <p>
+                  Get your tutorials delivered at let home collect sample from the victory of the
+                  managments.
+                </p>
+              </div>
+            </div>
+            <div class="--course-hours--">
+              <!-- >>>>>>>>> Toggle list <<<<<<<< -->
+              <p class="toggle-list">
+                <span class="--btn--">7 Video Classes <span>|</span> 4 hrs </span>
+                &nbsp;&nbsp;
+                <i class="fas fa-chevron-down"></i>
+              </p>
+            </div>
+          </div>
+          <!-- >>>>>>>>> List <<<<<<<< -->
+          <div class="--key-points--">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to reduce file pixel dimentions without loosing quality</li>
+                  <li>Create vector file from restarize layer styles</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to make logo pixel perfects with different extension</li>
+                  <li>Make color gradient with photoshop build-in tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- >>>>>>>>>>>>> End <<<<<<<<<<< -->
+
+        <!-- >>>>>>>>> Course # 3 <<<<<<<< -->
+        <div class="--course-- --course-1--">
+          <div class="--courses--">
+            <div class="--video--and--course--details--">
+              <div class="--video--tutorial-- --video--button--">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="--course-details--">
+                <!-- >>>>>>>>> Rating/Views <<<<<<<< -->
+                <div class="--rating--">
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  &nbsp;&nbsp;<span
+                    >5.0 (<span>392 reviews</span>)
+                    <span><img src="./images/eye-2.svg" alt="" /></span>
+                    <span>1,037</span> students watched</span
+                  >
+                </div>
+
+                <!-- >>>>>>>>> Heading <<<<<<<< -->
+                <h4>
+                  <a href="#">After effects animation tutorial with photoshop documents</a>
+                </h4>
+
+                <!-- >>>>>>>>> Paragraph <<<<<<<< -->
+                <p>
+                  Get your tutorials delivered at let home collect sample from the victory of the
+                  managments.
+                </p>
+              </div>
+            </div>
+            <div class="--course-hours--">
+              <!-- >>>>>>>>> Toggle list <<<<<<<< -->
+              <p class="toggle-list">
+                <span class="--btn--">7 Video Classes <span>|</span> 4 hrs </span>
+                &nbsp;&nbsp;
+                <i class="fas fa-chevron-down"></i>
+              </p>
+            </div>
+          </div>
+          <!-- >>>>>>>>> List <<<<<<<< -->
+          <div class="--key-points--">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to reduce file pixel dimentions without loosing quality</li>
+                  <li>Create vector file from restarize layer styles</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to make logo pixel perfects with different extension</li>
+                  <li>Make color gradient with photoshop build-in tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- >>>>>>>>>>>>> End <<<<<<<<<<< -->
+
+        <!-- >>>>>>>>> Course # 4 <<<<<<<< -->
+        <div class="--course-- --course-1--">
+          <div class="--courses--">
+            <div class="--video--and--course--details--">
+              <div class="--video--tutorial-- --video--button--">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="--course-details--">
+                <!-- >>>>>>>>> Rating/Views <<<<<<<< -->
+                <div class="--rating--">
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  <i class="fas fa-star fill-it"></i>
+                  &nbsp;&nbsp;<span
+                    >5.0 (<span>392 reviews</span>)
+                    <span><img src="./images/eye-2.svg" alt="" /></span>
+                    <span>2,538</span> students watched</span
+                  >
+                </div>
+
+                <!-- >>>>>>>>> Heading <<<<<<<< -->
+                <h4>
+                  <a href="#">Adobe illustrator vector art design mockup</a>
+                </h4>
+
+                <!-- >>>>>>>>> Paragraph <<<<<<<< -->
+                <p>
+                  Get your tutorials delivered at let home collect sample from the victory of the
+                  managments.
+                </p>
+              </div>
+            </div>
+            <div class="--course-hours--">
+              <!-- >>>>>>>>> Toggle list <<<<<<<< -->
+              <p class="toggle-list">
+                <span class="--btn--">7 Video Classes <span>|</span> 4 hrs </span>
+                &nbsp;&nbsp;
+                <i class="fas fa-chevron-down"></i>
+              </p>
+            </div>
+          </div>
+          <!-- >>>>>>>>> List <<<<<<<< -->
+          <div class="--key-points--">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to reduce file pixel dimentions without loosing quality</li>
+                  <li>Create vector file from restarize layer styles</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li>How to make logo pixel perfects with different extension</li>
+                  <li>Make color gradient with photoshop build-in tools</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- >>>>>>>>>>>>> End <<<<<<<<<<< -->
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>> How It Works <<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--how-it-works--">
+      <div class="container">
+        <!-- >>>>>>>>> Tagline <<<<<<<< -->
+        <p class="--main-p--">WHATS THE FUNCTION</p>
+        <!-- >>>>>>>>> Main Heading <<<<<<<< -->
+        <h3 class="--main-h--">Let’s see how it works</h3>
+
+        <!-- >>>>>>>>> Workflow <<<<<<<< -->
+        <div class="row">
+          <!-- >>>>>>>>> Steps <<<<<<<< -->
+
+          <!-- >>>>>>>>> Steps # 1 <<<<<<<< -->
+          <div class="col-lg-3">
+            <div class="--steps-- --step-1--">
+              <div class="--directions--">
+                <div class="--number-- first-three">
+                  <span>01</span>
+                </div>
+                <div class="--arrows--">
+                  <img src="./images/arrow-odd.png" class="img-fluid" alt="" />
+                </div>
+              </div>
+              <div class="--text-details--">
+                <h3>Set disbursement Instructions</h3>
+                <p>
+                  Get your blood tests delivered at <br />
+                  home collect a sample from the <br />
+                  your blood tests.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>>>>>>> End <<<<<<<<<<< -->
+
+          <!-- >>>>>>>>> Steps # 2 <<<<<<<< -->
+          <div class="col-lg-3">
+            <div class="--steps-- --step-1--">
+              <div class="--directions--">
+                <div class="--number-- first-three">
+                  <span>02</span>
+                </div>
+                <div class="--arrows--">
+                  <img src="./images/arrow-even.png" class="img-fluid" alt="" />
+                </div>
+              </div>
+              <div class="--text-details--">
+                <h3>Assembly retrieves funds from your account</h3>
+                <p>
+                  Get your blood tests delivered at <br />
+                  home collect a sample from the <br />
+                  your blood tests.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>>>>>>> End <<<<<<<<<<< -->
+
+          <!-- >>>>>>>>> Steps # 3 <<<<<<<< -->
+          <div class="col-lg-3">
+            <div class="--steps-- --step-1--">
+              <div class="--directions--">
+                <div class="--number-- first-three">
+                  <span>03</span>
+                </div>
+                <div class="--arrows--">
+                  <img src="./images/arrow-odd.png" class="img-fluid" alt="" />
+                </div>
+              </div>
+              <div class="--text-details--">
+                <h3>Assembly initiates disbursement</h3>
+                <p>
+                  Get your blood tests delivered at <br />
+                  home collect a sample from the <br />
+                  your blood tests.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>>>>>>> End <<<<<<<<<<< -->
+
+          <!-- >>>>>>>>> Steps # 4 <<<<<<<< -->
+          <div class="col-lg-3">
+            <div class="--steps-- --step-1--">
+              <div class="--directions--">
+                <div class="--number--">
+                  <span>04</span>
+                </div>
+              </div>
+              <div class="--text-details--">
+                <h3>Customer receives funds payment</h3>
+                <p>
+                  Get your blood tests delivered at <br />
+                  home collect a sample from the <br />
+                  your blood tests.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>>>>>>> End <<<<<<<<<<< -->
+        </div>
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>> Pricing Plan <<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--pricing--plan--">
+      <!-- >>>>>>>>> Tagline <<<<<<<< -->
+      <p class="--main-p--">PRICING PLAN</p>
+      <!-- >>>>>>>>> Main Heading <<<<<<<< -->
+      <h3 class="--main-h--">Choose your pricing policy</h3>
+
+      <!-- >>>>>>>>> Switch Plans <<<<<<<< -->
+      <div class="--btns--">
+        <ul>
+          <li class="monthly active">Monthly Plan</li>
+          <li class="annual">Annual Plan</li>
+        </ul>
+      </div>
+
+      <!-- >>>>>>>>> All Plans <<<<<<<< -->
+      <div class="container">
+        <div class="--plans--">
+          <!-- >>>>>>>>> Free Plans <<<<<<<< -->
+
+          <!-- >>>>> Free Plans <<<<< -->
+          <div class="--plan-- --free-plan--">
+            <!-- >>>>>> Plan Name <<<<< -->
+            <h3>Free Plan</h3>
+            <p>For Small teams or office</p>
+
+            <!-- >>>>> All Condition Check/Uncheck <<<<< -->
+            <ul>
+              <li class="check">Ultimate access to all course, exercises and assessments</li>
+              <li class="check">Free acess for all kind of exercise corrections with downloads.</li>
+              <li class="check">Total assessment corrections with free download access system</li>
+              <li class="uncheck">Unlimited download of courses on the mobile app contents</li>
+              <li class="uncheck">Download and print courses and exercises in PDF</li>
+            </ul>
+            <a href="#" class="--link-btn--">Start free trail</a>
+          </div>
+          <!-- >>>>>>>>> End <<<<<<<< -->
+
+          <!-- >>>>> Premium Plans <<<<< -->
+          <div class="--plan-- --premium-plan--">
+            <a href="#" class="--recommened--">Recommended</a>
+            <div class="--plan--price--">
+              <!-- >>>>>> Plan Name <<<<< -->
+              <div class="--plan--name--">
+                <h3>Premium</h3>
+                <p>For startup enterprise</p>
+              </div>
+
+              <!-- >>>>>> Price <<<<< -->
+              <div class="--price--">
+                <p>Starting from</p>
+                <h2>$<span id="--price-value--">49.99/mo</span></h2>
+              </div>
+            </div>
+            <!-- >>>>> All Condition Check/Uncheck <<<<< -->
+            <ul>
+              <li class="check">Ultimate access to all course, exercises and assessments</li>
+              <li class="check">Free acess for all kind of exercise corrections with downloads.</li>
+              <li class="check">Total assessment corrections with free download access system</li>
+              <li class="check">Unlimited download of courses on the mobile app contents</li>
+              <li class="check">Download and print courses and exercises in PDF</li>
+            </ul>
+            <a href="#" class="--link-btn--">Subscribe Now</a>
+          </div>
+          <!-- >>>>>>>>> End <<<<<<<< -->
+        </div>
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>> Free Tutorials <<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--free--tutorials--">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-xl-7">
+            <img src="./images/free-course.png" alt="free-course" />
+          </div>
+          <div class="col-md-12 col-xl-5">
+            <div class="--right--">
+              <!-- Tagline -->
+              <h6 class="--main-p--">FREE TUTORIAL</h6>
+              <!-- Heading -->
+              <h1>
+                More than thousand <br />
+                of free tutorial upload <br />
+                every weeks
+              </h1>
+              <p>
+                Get your tests delivered at let home collect sample <br />
+                from the victory of the managments that supplies best <br />
+                design system guidelines ever. Get your tests <br />
+                delivered at let home collect sample.
+              </p>
+              <a href="#" class="--link-btn--">Explore details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>> Frequently Questions <<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--about--us--">
+      <!-- >>>>>>>>> Tagline <<<<<<<< -->
+      <p class="--main-p--">Quality Features</p>
+      <!-- >>>>>>>>> Main Heading <<<<<<<< -->
+      <h3 class="--main-h--">Do you have any question?</h3>
+
+      <div class="container">
+        <!-- >>>>>>> All Frequently Asked Question <<<<<< -->
+        <div class="--frequently--asked--question--">
+          <!-- >>>>>>> Each --f-a-q--1-- have each question <<<<<< -->
+
+          <!-- >>>>>>> Question # 1 <<<<<< -->
+          <div class="--f-a-q-- --f-a-q--1-">
+            <input class="--toggle-- active" id="faq-drawer" type="checkbox" />
+
+            <!-- >>>>>>> Question <<<<<< -->
+            <label class="--question--" for="faq-drawer"
+              >How to contact with riders emergency ?
+            </label>
+
+            <!-- >>>>>>> Answer <<<<<< -->
+            <div class="faq-drawer__content-wrapper">
+              <div class="faq-drawer__content">
+                <p>
+                  An FAQ is a list of frequently asked questions (FAQs) and answers on a particular
+                  topic (also known as Questions and Answers [Q&A] or Frequently Asked Questions).
+                  The format is often used in articles, websites, email lists, and online forums
+                  where common questions tend to recur, for example through posts or queries by new
+                  users related to common knowledge gaps. The purpose of an FAQ is generally provide
+                  information. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>> End <<<<<< -->
+
+          <!-- >>>>>>> Question # 2 <<<<<< -->
+          <div class="--f-a-q-- --f-a-q--2--">
+            <input class="--toggle--" id="faq-drawer-2" type="checkbox" />
+
+            <!-- >>>>>>> Question <<<<<< -->
+            <label class="--question--" for="faq-drawer-2"
+              >App installation failed, how to update system information?</label
+            >
+
+            <!-- >>>>>>> Answer <<<<<< -->
+            <div class="faq-drawer__content-wrapper">
+              <div class="faq-drawer__content">
+                <p>
+                  An FAQ is a list of frequently asked questions (FAQs) and answers on a particular
+                  topic (also known as Questions and Answers [Q&A] or Frequently Asked Questions).
+                  The format is often used in articles, websites, email lists, and online forums
+                  where common questions tend to recur, for example through posts or queries by new
+                  users related to common knowledge gaps. The purpose of an FAQ is generally provide
+                  information. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>> End <<<<<< -->
+
+          <!-- >>>>>>> Question # 3 <<<<<< -->
+          <div class="--f-a-q-- --f-a-q--3--">
+            <!-- Input responsible for toggling showText/hideText  -->
+            <input class="--toggle--" id="faq-drawer-3" type="checkbox" />
+
+            <!-- >>>>>>> Question <<<<<< -->
+            <label class="--question--" for="faq-drawer-3"
+              >Website reponse taking time, how to improve?</label
+            >
+
+            <!-- >>>>>>> Answer <<<<<< -->
+            <div class="faq-drawer__content-wrapper">
+              <div class="faq-drawer__content">
+                <p>
+                  An FAQ is a list of frequently asked questions (FAQs) and answers on a particular
+                  topic (also known as Questions and Answers [Q&A] or Frequently Asked Questions).
+                  The format is often used in articles, websites, email lists, and online forums
+                  where common questions tend to recur, for example through posts or queries by new
+                  users related to common knowledge gaps. The purpose of an FAQ is generally provide
+                  information. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>> End <<<<<< -->
+
+          <!-- >>>>>>> Question # 4 <<<<<< -->
+          <div class="--f-a-q-- --f-a-q--4--">
+            <!-- Input responsible for toggling showText/hideText  -->
+            <input class="--toggle--" id="faq-drawer-4" type="checkbox" />
+
+            <!-- >>>>>>> Question <<<<<< -->
+            <label class="--question--" for="faq-drawer-4"
+              >New update fixed all bug and issues</label
+            >
+
+            <!-- >>>>>>> Answer <<<<<< -->
+            <div class="faq-drawer__content-wrapper">
+              <div class="faq-drawer__content">
+                <p>
+                  An FAQ is a list of frequently asked questions (FAQs) and answers on a particular
+                  topic (also known as Questions and Answers [Q&A] or Frequently Asked Questions).
+                  The format is often used in articles, websites, email lists, and online forums
+                  where common questions tend to recur, for example through posts or queries by new
+                  users related to common knowledge gaps. The purpose of an FAQ is generally provide
+                  information. 
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- >>>>>>> End <<<<<< -->
+        </div>
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>> Ready to Learn Design <<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <div class="--learn--from--">
+      <div class="container">
+        <h1>
+          Ready to learn design <br />
+          with Nia Matos
+        </h1>
+        <a href="#" class="--link-btn--">Start Learning Today</a>
+      </div>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>> Footer <<<<<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<< -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3">
+            <!-- >>>>>>> About Us <<<<<<< -->
+            <div class="--navigation-list--">
+              <ul>
+                <li>About Us</li>
+                <li><a href="#">Support Center</a></li>
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Copyright</a></li>
+                <li><a href="#">Popular Campaign</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <!-- >>>>>>> Our Information <<<<<<< -->
+            <div class="--navigation-list--">
+              <ul>
+                <li>Our Information</li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Site Map</a></li>
+                <li><a href="#">Store Hours</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <!-- >>>>>>> My Account <<<<<<< -->
+            <div class="--navigation-list--">
+              <ul>
+                <li>My Account</li>
+                <li><a href="#">Press inquiries</a></li>
+                <li><a href="#">Social media</a></li>
+                <li><a href="#">directories</a></li>
+                <li><a href="#">Images & B-roll</a></li>
+                <li><a href="#">Permissions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <!-- >>>>>>> Policy <<<<<<< -->
+            <div class="--navigation-list--">
+              <ul>
+                <li>Policy</li>
+                <li><a href="#">Application security</a></li>
+                <li><a href="#">Software principles</a></li>
+                <li><a href="#">Unwanted software policy</a></li>
+                <li><a href="#">Responsible supply chain</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- >>> JQUERY <<< -->
     <script src="./jquery/jquery.min.js"></script>
+
+    <!-- >>>  SLICK SLIDERS <<<-->
+    <script src="./slick/slick.min.js"></script>
+
+    <script>
+      var $slickEl = $(".favourite-courses");
+
+      $slickEl.slick({
+        focusOnSelect: true,
+        dots: false,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
 
     <!-- >>> Bootstrap v5.0.2 | Front End Framework <<< -->
     <script src="./bootstrap/js/bootstrap.min.js"></script>
