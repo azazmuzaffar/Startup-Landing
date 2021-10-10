@@ -58,6 +58,14 @@
   margin-bottom: 30px;
 }
 
+/* >>>>>> Media Query / Width / 991px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /* >>>>>>>>  Main Heading   <<<<<<<< */
+  .--main-h-- {
+    font-size: 25px;
+  }
+}
+
 /* >>>>>>>> Buttons <<<<<<<< */
 .--link-btn-- {
   font-size: 16px !important;
@@ -73,6 +81,13 @@
   color: #fcf2e8 !important;
   background: #ef9e48 !important;
   transition: 0.5s;
+}
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>>>  Buttons <<<<<<<< */
+  .--link-btn-- {
+    font-size: 14px !important;
+  }
 }
 
 /* >>>>>>>> Video Play/Pause <<<<<<<< */
@@ -165,10 +180,11 @@
 }
 .--navigation-- .--toggle-menu-- {
   position: absolute;
-  right: 30px;
+  right: 22px;
   top: 50%;
   transform: translateY(-50%);
   display: none;
+  cursor: pointer;
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
@@ -191,6 +207,13 @@
 
 /* >>>>>> Media Query / Width / 1230px <<<<<<< */
 @media screen and (max-width: 991px) {
+  /* >>>>>>>> Navbar <<<<<<<< */
+  .--navigation-- .navbar {
+    height: 87px;
+  }
+  .--navigation--.fixed .navbar {
+    height: 65px;
+  }
   .--navigation-- .--toggle-menu-- {
     display: block;
   }
@@ -198,6 +221,96 @@
     width: fit-content !important;
     position: absolute;
     left: 20px;
+  }
+}
+
+/* >>>>>>>> Mobile Navbar bg <<<<<<<< */
+.--nav-overlay-- {
+  position: fixed;
+  z-index: 99999999999;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.267);
+  transition: 2s;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.--nav-overlay--.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* >>>>>>>> Mobile Navbar <<<<<<<< */
+.--mobile--nav-- {
+  position: fixed;
+  z-index: 99999999999;
+  width: fit-content;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.267);
+  transform: translateX(-100%);
+  transition: transform 200ms 260ms ease;
+}
+
+/* >>>> Show Mobile Navbar when Show class added <<<< */
+.--mobile--nav--.show {
+  transform: translateX(-0%);
+  transition: transform 200ms 260ms ease;
+}
+.--mobile--nav-- .--main-nav-- {
+  position: relative;
+  width: 300px;
+  height: 100vh;
+  padding: 30px;
+  background: linear-gradient(-180deg, #e0f5fa 0%, #fffde6 100%);
+}
+
+/* >>>>>>>> Will close the Mobile Menu <<<<<<<< */
+.--mobile--nav-- .--main-nav-- .--clost-it-- {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+.--mobile--nav-- .--main-nav-- .--nav-list-- {
+  margin-top: 30px;
+}
+
+/* >>>>>>>> Navigations <<<<<<<< */
+.--mobile--nav-- .--main-nav-- .--nav-list-- ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.--mobile--nav-- .--main-nav-- .--nav-list-- ul li {
+  line-height: 40px;
+}
+.--mobile--nav-- .--main-nav-- .--nav-list-- ul li a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #02073e;
+}
+
+/* >>>>>>>> Try for Free <<<<<<<< */
+.--mobile--nav-- .--main-nav-- .--try-free-- {
+  text-align: center;
+}
+.--mobile--nav-- .--main-nav-- .--try-free-- a {
+  padding: 12px;
+  background: #02073e;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  width: calc(100% - 60px);
+  position: absolute;
+  bottom: 30px;
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>>>> Mobile Navbar <<<<<<<< */
+  .--mobile--nav-- .--main-nav-- {
+    width: 320px;
   }
 }
 
@@ -237,6 +350,11 @@
 }
 .--hero--banner-- .container .row .--text--content-- .--rating-- i.fill-it {
   color: #ef9e48;
+}
+
+/* it will separate the rating and views*/
+#--break-- {
+  display: none;
 }
 .--hero--banner-- .container .row .--text--content-- .--rating-- span {
   color: #02073e !important;
@@ -367,8 +485,8 @@
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
+  /* >>>>>> Hero Banner <<<<<<< */
   .--hero--banner-- .container {
     max-width: 1233px;
     height: 100%;
@@ -404,6 +522,7 @@
 
 /* >>>>>> Media Query / Width / 1230px <<<<<<< */
 @media screen and (max-width: 1230px) {
+  /* >>>>>> Hero Banner <<<<<<< */
   .--hero--banner-- .container {
     max-width: 100%;
     height: 100%;
@@ -423,17 +542,21 @@
 
 /* >>>>>> Media Query / Width / 1200px <<<<<<< */
 @media screen and (max-width: 1199px) {
+  /* >>>>>> Hero Banner <<<<<<< */
   .--hero--banner-- {
     height: 100%;
   }
+
   /* >>>>>>> Main Paragraph <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--main--para-- p br {
     display: none;
   }
+
   /* >>>>>>> Form <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- form {
     width: 100%;
   }
+
   /* >>>>>>> Main Heading <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--main--heading-- h1 {
     font-size: 45px;
@@ -442,10 +565,12 @@
   .--hero--banner-- .container .row .--text--content-- .--main--heading-- img {
     display: none;
   }
+
   /* >>>>>>> Rating <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--rating-- {
     margin: 0px 0px 15px 0px;
   }
+
   /* >>>>>>> Sponsers <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--sponsers-- {
     width: 68%;
@@ -453,6 +578,7 @@
   .--hero--banner-- .container .row .--text--content-- .--sponsers-- img {
     margin-top: 20px;
   }
+
   /* >>>>>>> Banner Images <<<<<<< */
   .--hero--banner-- .container .row .--banner--images-- .--layers-- {
     width: 100%;
@@ -477,21 +603,95 @@
   }
 }
 
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
 @media screen and (max-width: 768px) {
+  /* >>>>>> Hero Banner <<<<<<< */
   .--hero--banner-- {
     height: fit-content;
-    padding-bottom: 0;
+    padding: 115px 10px 0px 10px;
   }
+
   /* >>>>>>> Main Heading <<<<<<< */
   .--hero--banner-- .container .row .--text--content-- .--main--heading-- h1 {
     font-size: 36px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+  }
+
+  /* >>>>>>> Text Content <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- form {
+    height: 45px;
+    margin-bottom: 35px;
+  }
+
+  /* >>>>>>> Partners <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- form svg {
+    top: 11px;
+  }
+  .--hero--banner-- .container .row .--text--content-- form input {
+    font-size: 15px;
+    padding: 0px 20px;
   }
   .--hero--banner-- .container .row .--banner--images-- {
     margin-top: 60px;
   }
+  .--hero--banner-- .container .row .--banner--images-- .--layers-- {
+    border: none;
+    background: red;
+    margin: 0;
+    padding: 0;
+  }
+  .--hero--banner-- .container .row .--banner--images-- .layer-1 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
   .--hero--banner-- .container .row .--banner--images-- .layer-2 {
-    top: -20px;
+    top: 0px;
+    margin-right: -13px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 400px <<<<<<< */
+@media screen and (max-width: 400px) {
+  /* >>>>>>> Partners <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- .--sponsers-- {
+    width: 100%;
+  }
+  .--hero--banner-- .container .row .--text--content-- .--sponsers-- span {
+    font-size: 15px;
+  }
+  .--hero--banner-- .container .row .--text--content-- .--sponsers-- img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* >>>>>> Media Query / Width / 375px <<<<<<< */
+@media screen and (max-width: 375px) {
+  /* >>>>>>> Hero Banner <<<<<<< */
+  .--hero--banner-- {
+    height: fit-content;
+    padding: 96px 10px 0px 10px;
+    background: linear-gradient(-180deg, #e0f5fa 0%, #fffde6 100%);
+  }
+
+  /* >>>>>>> Form <<<<<<< */
+  .--hero--banner-- .container .row .--text--content-- form {
+    margin: 15px 0px 25px 0px;
+  }
+  .--hero--banner-- .container .row .--text--content-- .--main--heading-- h1 {
+    font-size: 28px;
+    padding: 0;
+  }
+  .--hero--banner-- .container .row .--text--content-- .--main--para-- p {
+    font-size: 15px;
+    padding-right: 10px;
+  }
+  .--hero--banner-- .container .row .--text--content-- form svg {
+    top: 11px;
+    right: 18px;
+    width: 18px;
   }
 }
 
@@ -513,7 +713,7 @@
 /* >>>>>>>> Frame Holding the Video <<<<<<<< */
 .--video-- .--frame-- {
   position: relative;
-  width: 50%;
+  max-width: 940px;
   height: 55%;
   background: #181818;
   left: 50%;
@@ -547,6 +747,40 @@
 .--video-- .--cross-- svg {
   width: 26px;
   fill: white;
+}
+
+/* >>>>>> Media Query / Width / 1200px <<<<<<< */
+@media screen and (max-width: 1200px) {
+  /* >>>>>> Video Show <<<<<< */
+  .--video-- .--frame-- {
+    position: relative;
+    max-width: 100%;
+    height: 43%;
+  }
+  .--video-- .--cross-- {
+    top: -36px;
+    right: 10px;
+  }
+  .--video-- .--cross-- svg {
+    width: 20px;
+  }
+}
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>> Video Show <<<<<< */
+  .--video-- .--frame-- {
+    position: relative;
+    max-width: 100%;
+    height: 32%;
+  }
+}
+
+/* >>>>>> Media Query / Width / 375px <<<<<<< */
+@media screen and (max-width: 375px) {
+  /* >>>>>> Video Show <<<<<< */
+  .--video-- .--frame-- {
+    height: 27%;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -648,13 +882,18 @@
   transition: 500ms;
 }
 
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
 @media screen and (max-width: 1440px) {
   /* >>>>>>> Populat Tutorials <<<<<<< */
   .--quality--features-- .container {
     text-align: center;
     max-width: 1200px;
     height: fit-content;
-    padding: 120px 0px;
+    padding: 100px 0px;
+  }
+  .--quality--features-- .row .slide {
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
   /* >>>>>>> Tutorials <<<<<<< */
@@ -670,16 +909,35 @@
     margin-bottom: 10px;
   }
 }
+
+/* >>>>>> Media Query / Width / 1230px <<<<<<< */
 @media screen and (max-width: 1230px) {
   /* >>>>>>> Populat Tutorials <<<<<<< */
   .--quality--features-- .container {
     max-width: 100%;
-    padding: 120px 20px;
+    padding: 100px 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 991px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /* >>>>>>> Populat Tutorials <<<<<<< */
+  .--quality--features-- .container {
+    padding: 60px 0px;
+    padding-top: 80px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>> Populat Tutorials <<<<<<< */
+  .--quality--features-- .container {
+    padding: 50px 0px 10px 0px;
   }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-/* >>>>>>>>>>>> Core Features <<<<<<<<< */
+/* >>>>>>>>>>> Core Features <<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
 .--core--features-- {
@@ -742,6 +1000,13 @@
   white-space: pre-line;
   padding: 0px 30px;
 }
+.--core--features-- .--box-- p {
+  display: block;
+  margin-top: -25px;
+}
+.--core--features-- .--box-- p br {
+  display: none;
+}
 .--core--features-- .--box--.--box-1-- h1 {
   color: #ef9e48;
 }
@@ -756,7 +1021,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
   /* >>>>>>>>>>>> Core Features <<<<<<<<< */
   .--core--features-- {
@@ -774,7 +1038,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1281px <<<<<<< */
-
 @media screen and (max-width: 1281px) {
   /* >>>>>>>>>>>> Core Features <<<<<<<<< */
   .--core--features-- .--box-- {
@@ -787,6 +1050,113 @@
   }
   .--core--features-- .--box-- h1 {
     font-size: 36px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1199px <<<<<<< */
+@media screen and (max-width: 1199px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- .--right-- p {
+    font-size: 16px;
+  }
+  .--core--features-- .--right-- p br {
+    display: none;
+  }
+  .--core--features-- .--box-- {
+    margin-top: 35px;
+    padding: 20px 5px;
+    padding-top: 35px;
+    width: 100%;
+  }
+  .--core--features-- .container .row {
+    align-items: center;
+  }
+  .--core--features-- .container .col-lg-5 {
+    padding-top: 0px;
+  }
+  .--core--features-- .container .col-lg-7 {
+    width: 56.6%;
+    padding-left: 10px;
+    padding-right: 25px;
+  }
+  .--core--features-- .--box-- h1 {
+    font-size: 36px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 991px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- {
+    text-align: center;
+    margin-top: 0px;
+    padding: 0px 0px 80px 0px;
+  }
+  .--core--features-- .--right-- h1 br {
+    display: none;
+  }
+  .--core--features-- .container .col-lg-5 {
+    order: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .--core--features-- .container .col-lg-7 {
+    order: 12;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- .--right-- h1 {
+    font-size: 24px;
+  }
+  .--core--features-- .--right-- p {
+    line-height: 30px;
+    font-size: 15px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- .--left-- .col-6 {
+    padding: 0;
+    padding-right: 7px;
+  }
+  .--core--features-- .--left-- .col-6.--box-3-4-- {
+    padding-left: 7px;
+    padding-right: 0px;
+  }
+  .--core--features-- .--box-- p {
+    font-size: 16px;
+    padding: 0px 5px;
+  }
+  .--core--features-- .--box-- {
+    margin-top: 15px;
+    padding: 20px 5px;
+  }
+  .--core--features-- .container .col-lg-7 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 420px <<<<<<< */
+@media screen and (max-width: 420px) {
+  /* >>>>>>>>>>>> Core Features <<<<<<<<< */
+  .--core--features-- .--left-- .col-6.--box-3-4-- {
+    margin-top: 0px;
+  }
+  .--core--features-- .--box-- p {
+    font-size: 14px;
+    padding: 0px 5px;
   }
 }
 
@@ -804,19 +1174,22 @@
 .--designing-courses-- .container {
   width: 1200px;
 }
+.--designing-courses-- .--courses-- {
+  display: flex;
+  align-items: center;
+}
 
 /* >>>>>>>>>> Courses <<<<<<< */
 .--designing-courses-- .--course-- {
   position: relative;
   height: fit-content;
-  padding: 25px 40px 25px 40px;
+  padding: 25px 40px 15px 40px;
   margin-bottom: 20px;
   border-radius: 6px;
   border: 1px solid #f3f4f5;
 }
-.--designing-courses-- .--courses-- {
-  display: flex;
-  align-items: center;
+.--designing-courses-- .--course--.active {
+  box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
 }
 .--designing-courses-- .--course-- .--video--and--course--details-- {
   text-align: left;
@@ -826,7 +1199,7 @@
 
 /* >>>>>>>>>> Heading <<<<<<< */
 .--designing-courses-- .--course-- h4 {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
   color: black;
   line-height: 1.36;
@@ -901,6 +1274,9 @@
   color: #797979;
   font-size: 12px;
 }
+.--designing-courses-- .--course--.active .--course-hours-- p i {
+  transform: rotate(180deg);
+}
 .--designing-courses-- .--course-- .--course-hours-- .--btn-- {
   transition: 0.5s;
   font-size: 15px;
@@ -929,11 +1305,15 @@
   padding: 0;
 }
 .--designing-courses-- .--course-- .--key-points-- ul li {
+  font-size: 16px;
   list-style-type: none;
   list-style: none;
-  line-height: 35px;
+  line-height: 18px;
   display: table-row;
   animation: mymove 1s;
+}
+.--designing-courses-- .--course-- .--key-points-- ul li p {
+  color: #02073e;
 }
 .--designing-courses-- .--course-- .--key-points-- ul li::before {
   font-family: "Font Awesome 5 Free";
@@ -960,7 +1340,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
   /* >>>>>>>>>>>> Designing Courses <<<<<<<<< */
   .--designing-courses-- .--course-- {
@@ -969,6 +1348,99 @@
   .--designing-courses-- .container {
     width: 100%;
     padding: 0;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1200px <<<<<<< */
+@media screen and (max-width: 1200px) {
+  /* >>>>>>>>>>>> Designing Courses <<<<<<<<< */
+  .--designing-courses-- .container {
+    max-width: 100%;
+    padding: 0px 30px;
+  }
+  .--designing-courses-- .--courses-- {
+    display: block;
+    align-items: unset;
+  }
+  .--designing-courses-- .--course-- .--key-points-- ul li p {
+    line-height: 20px;
+  }
+  .--designing-courses-- .--course-- .--course-hours-- {
+    width: fit-content;
+    margin: 20px 0px 0px 130px;
+  }
+  .--designing-courses-- .--course--.active .--course-hours-- {
+    margin: 20px 0px 40px 130px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1200px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /* >>>>>>>>>>>> Designing Courses <<<<<<<<< */
+  .--designing-courses-- .container {
+    padding: 0px 20px;
+  }
+  .--designing-courses-- .--course-- .--key-points-- ul {
+    margin: 0;
+  }
+  .--designing-courses-- .--course-- .--course-hours-- {
+    margin: 20px 0px 0px 130px;
+  }
+  .--designing-courses-- .--course--.active .--course-hours-- {
+    margin: 20px 0px 40px 130px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>>>>>>> Designing Courses <<<<<<<<< */
+  .--designing-courses-- .--course-- .--video--and--course--details-- {
+    text-align: left;
+    display: block;
+    align-items: unset;
+  }
+  /* >>> Separating rating and seen views <<< */
+  #--break-- {
+    display: block;
+  }
+  .--seen-- {
+    display: block;
+    padding-top: 10px;
+    margin-left: -10px;
+  }
+  /* >>>>>>>> Video Play/Pause <<<<<<<< */
+  .--designing-courses-- .--course-- .--video--tutorial-- {
+    margin-bottom: 40px;
+  }
+  /* >>>>>>>>>> Heading <<<<<<< */
+  .--designing-courses-- .--course-- h4 {
+    font-size: 19px;
+  }
+  /* >>>>>>>>>> List <<<<<<< */
+  .--designing-courses-- .--course-- .--key-points-- {
+    padding-left: 0px;
+  }
+  /* >>>>>>>>>> Course Hours <<<<<<< */
+  .--designing-courses-- .--course-- .--course-hours-- {
+    margin: 35px 0px 20px 0px;
+  }
+  .--designing-courses-- .--course--.active .--course-hours-- {
+    margin: 35px 0px 40px 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>>>>>>>> Designing Courses <<<<<<<<< */
+  .--designing-courses-- {
+    padding-bottom: 10px;
+  }
+  .--designing-courses-- .--main-h-- {
+    margin-bottom: 30px;
+  }
+  /* >>>>>>>>>> Course Hours <<<<<<< */
+  .--designing-courses-- .--course-- .--course-hours-- {
+    margin: 35px 0px 0px 0px;
   }
 }
 
@@ -983,7 +1455,7 @@
   background: linear-gradient(180deg, #ebf9ff 0%, #f6f6ff 100%);
 }
 .--how-it-works-- .container {
-  width: 1200px;
+  max-width: 1200px;
 }
 .--how-it-works-- .--steps-- {
   text-align: left;
@@ -1026,11 +1498,65 @@
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
   /* >>>>>>>>>>>> How It Works  <<<<<<<<< */
   .--how-it-works-- .--steps-- .--directions-- .--number--.first-three {
     width: 78px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1200px <<<<<<< */
+@media screen and (max-width: 1200px) {
+  /* >>>>>>>>>>>> How It Works  <<<<<<<<< */
+  .--how-it-works-- .container {
+    max-width: 100%;
+    padding: 0px 20px;
+  }
+  .--how-it-works-- .--steps-- .--directions-- {
+    margin: 25px 0px 25px 0px;
+  }
+  .--how-it-works-- .--steps-- .--directions-- .--number--.first-three {
+    width: 70px;
+  }
+  .--how-it-works-- .--steps-- .--text-details-- h3 {
+    font-size: 20px;
+  }
+  .--how-it-works-- .--steps-- .--text-details-- p br {
+    display: none;
+  }
+  .--how-it-works-- .--steps-- .--arrows-- {
+    display: none;
+  }
+}
+
+/* >>>>>> Media Query / Width / 991px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /* >>>>>>>>>>>> How It Works  <<<<<<<<< */
+  .--how-it-works-- {
+    margin: 50px 0px;
+    padding: 60px 0px 40px 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 575px <<<<<<< */
+@media screen and (max-width: 575px) {
+  /* >>>>>>>>>>>> How It Works  <<<<<<<<< */
+  .--how-it-works-- .--main-h-- {
+    margin-bottom: 20px;
+  }
+  .--how-it-works-- .--steps-- .--text-details-- h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .--how-it-works-- .--steps-- .--directions-- {
+    margin: 15px 0px 15px 0px;
+  }
+  .--how-it-works-- .--steps-- .--directions-- .--number-- {
+    width: 50px !important;
+    height: 50px;
+  }
+  .--how-it-works-- .--steps-- .--directions-- .--number-- span {
+    font-size: 24px;
   }
 }
 
@@ -1064,6 +1590,7 @@
   cursor: pointer;
   background: transparent;
 }
+
 /*>>>>>> Active Plan <<<<< */
 .--pricing--plan-- .--btns-- ul li.active {
   background: white;
@@ -1107,7 +1634,6 @@
 .--pricing--plan-- .--plans--.animate2 .--recommened-- {
   animation: fade2 1s;
 }
-
 .--pricing--plan-- .--plans-- .--plan-- h3 {
   font-size: 22px;
   line-height: 23px;
@@ -1121,7 +1647,6 @@
 .--pricing--plan-- .--plans--.animate2 h3 {
   animation: fadeout2 1.5s;
 }
-
 .--pricing--plan-- .--plans-- .--plan-- p {
   font-size: 16px;
   font-weight: normal;
@@ -1193,7 +1718,6 @@
 .--pricing--plan-- .--plans--.animate2 .--plan-- ul li {
   animation: fade2 1s;
 }
-
 .--pricing--plan-- .--plans-- .--plan-- ul li::before {
   font-family: "Font Awesome 5 Free";
   font-size: 20px;
@@ -1216,7 +1740,6 @@
   content: "\f057";
   color: #aebcd3;
 }
-
 .--pricing--plan-- .--plans-- .--plan--.--free-plan-- {
   margin-right: 3%;
 }
@@ -1239,7 +1762,6 @@
 }
 
 /*>>>>>> Animations <<<<< */
-
 /*>>>>>> Just Hide/Show delay <<<<< */
 @keyframes fadeout {
   from {
@@ -1281,6 +1803,97 @@
   }
 }
 
+/* >>>>>> Media Query / Width / 1440px <<<<<<< */
+@media screen and (max-width: 1440px) {
+  /*>>>>>> Pricing Plan <<<<< */
+  .--pricing--plan-- .container {
+    text-align: left;
+    max-width: 1000px;
+  }
+  .--pricing--plan-- .--plans-- {
+    margin-left: 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 991px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /*>>>>>> Pricing Plan <<<<< */
+  .--pricing--plan-- {
+    text-align: center;
+    padding: 10px 8px 60px 8px;
+  }
+  /*>>>>>> Plan Free/Premium <<<<< */
+  .--pricing--plan-- .--plans-- .--plan-- {
+    padding: 62px 25px 50px 25px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- {
+    padding: 22px 25px 50px 25px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--free-plan-- p {
+    margin-bottom: 35px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- {
+    margin-bottom: 25px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /*>>>>>> Pricing Plan <<<<< */
+
+  /*>>>>>> Plan Free/Premium <<<<< */
+  .--pricing--plan-- .--plans-- {
+    display: block;
+  }
+  .--pricing--plan-- .--plans-- .--plan-- {
+    padding: 50px 15px 30px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- {
+    padding: 18px 15px 30px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--free-plan--,
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- {
+    margin: 0;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- {
+    margin-top: 30px;
+  }
+  /*>>>>>> Plan List Items <<<<< */
+  .--pricing--plan-- .--plans-- .--plan-- ul {
+    margin-bottom: 40px;
+  }
+  .--pricing--plan-- .--plans-- .--plan-- ul li {
+    padding-right: 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /*>>>>>> Plan Free/Premium <<<<< */
+  .--pricing--plan-- .--plans-- .--plan-- h3 {
+    margin-bottom: 8px;
+  }
+  .--pricing--plan-- .--plans-- .--plan-- p {
+    font-size: 14px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- .--price-- p {
+    font-size: 16px;
+  }
+  .--pricing--plan-- .--plans-- .--plan--.--premium-plan-- .--plan--price-- .--price-- h2 {
+    font-size: 20px;
+  }
+  .--pricing--plan-- .--plans-- .--plan-- ul li {
+    line-height: 20px;
+  }
+  .--pricing--plan-- .--plans-- .--plan-- ul li::before {
+    font-size: 16px;
+  }
+  /*>>>>>> Recommended Plan <<<<< */
+  .--pricing--plan-- .--plans-- .--recommened-- {
+    padding: 4px 10px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>> Free Tutorials  <<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -1314,6 +1927,9 @@
   font-weight: bold;
   letter-spacing: -1.5px;
 }
+.--free--tutorials-- .--right-- h1 span br {
+  display: none;
+}
 .--free--tutorials-- .--right-- p {
   color: #02073e;
   font-size: 18px;
@@ -1328,7 +1944,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1800px <<<<<<< */
-
 @media screen and (max-width: 1800px) {
   /* >>>>>>>>  Free Tutorials  <<<<<<<< */
   .--free--tutorials-- .container {
@@ -1343,7 +1958,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
   /* >>>>>>>>  Free Tutorials  <<<<<<<< */
   .--free--tutorials-- .container .col-xl-7 img {
@@ -1354,7 +1968,6 @@
 }
 
 /* >>>>>> Media Query / Width / 1300px <<<<<<< */
-
 @media screen and (max-width: 1300px) {
   /* >>>>>>>>  Free Tutorials  <<<<<<<< */
   .--free--tutorials-- .container .col-xl-7 img {
@@ -1364,15 +1977,74 @@
 }
 
 /* >>>>>> Media Query / Width / 1200px <<<<<<< */
-
 @media screen and (max-width: 1199px) {
   /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- {
+    padding: 100px 0px 150px 0px;
+    text-align: center;
+  }
   .--free--tutorials-- .container .col-xl-7 {
     width: 100%;
+    padding: 0px 20px;
+    margin-bottom: 15px;
+  }
+  .--free--tutorials-- .container .col-xl-5 {
+    width: 100%;
+    padding: 0px 20px;
+    margin: 0;
   }
   .--free--tutorials-- .container .col-xl-7 img {
-    left: auto;
+    left: 0px;
     width: 100%;
+  }
+}
+
+/* >>>>>> Media Query / Width / 1024px <<<<<<< */
+@media screen and (max-width: 1024px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- {
+    padding: 0px 0px 100px 0px;
+    text-align: center;
+  }
+  .--free--tutorials-- .--right-- h1 {
+    font-size: 36px;
+  }
+  .--free--tutorials-- .--right-- h1 br {
+    display: none;
+  }
+  .--free--tutorials-- .--right-- h1 span br {
+    display: block;
+  }
+  .--free--tutorials-- .--right-- p {
+    font-size: 18px;
+    line-height: 2.3;
+    margin: 25px 0px 30px 0px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- .--right-- h1 {
+    font-size: 24px;
+  }
+  .--free--tutorials-- .--right-- p {
+    font-size: 16px;
+  }
+  .--free--tutorials-- .--right-- h1 span br {
+    display: none;
+  }
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>>>>  Free Tutorials  <<<<<<<< */
+  .--free--tutorials-- .--right-- p br {
+    display: none;
+  }
+  .--pricing--plan-- .--plans-- .--plan-- ul li {
+    font-size: 15px;
+    padding-right: 10px;
   }
 }
 
@@ -1452,13 +2124,9 @@
   padding-left: 56px;
 }
 .--about--us-- .container .faq-drawer__content-wrapper p {
-  font-size: var(--paragraph);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
+  font-size: 16px;
   line-height: 1.88;
-  letter-spacing: normal;
-  color: #5d646d;
+  color: #3b4047;
 }
 /* >>>>> it will make sure that only check item display <<<<< */
 .--toggle--.active + .--question-- + .faq-drawer__content-wrapper {
@@ -1471,6 +2139,33 @@
 }
 .--toggle--.active + .--question--::before {
   content: "\f068";
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>>>  FAQ  <<<<<<<< */
+  .--about--us-- .container {
+    padding: 0px 20px;
+    margin-top: 30px;
+  }
+  .--about--us-- .container .--question--::before {
+    margin: 0px 10px 0px 0px;
+  }
+  .--about--us-- .container .--question-- {
+    font-size: 16px;
+    text-indent: -32px;
+    padding-left: 32px;
+  }
+  .--about--us-- .container .faq-drawer__content-wrapper {
+    padding-left: 30px;
+  }
+  .--about--us-- .container .faq-drawer__content-wrapper p {
+    font-size: 15px;
+  }
+  /* >>>>> it will make sure that only check item display <<<<< */
+  .--toggle--.active + .--question-- + .faq-drawer__content-wrapper {
+    padding: 5px 0px 15px 30px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -1494,11 +2189,45 @@
 }
 
 /* >>>>>> Media Query / Width / 1440px <<<<<<< */
-
 @media screen and (max-width: 1440px) {
   /* >>>>>>>>  Learn From  <<<<<<<< */
   .--learn--from-- h1 {
     font-size: 36px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 991px <<<<<<< */
+@media screen and (max-width: 991px) {
+  /* >>>>>>>>  Learn From  <<<<<<<< */
+  .--learn--from-- {
+    padding: 20px 0px 95px 0px;
+  }
+  .--learn--from-- .--link-btn-- {
+    padding: 15px 24px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 768px <<<<<<< */
+@media screen and (max-width: 768px) {
+  /* >>>>>>>>  Learn From  <<<<<<<< */
+  .--learn--from-- h1 {
+    font-size: 24px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>>>>  Learn From  <<<<<<<< */
+  .--learn--from-- h1 {
+    margin-bottom: 57px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 375px <<<<<<< */
+@media screen and (max-width: 375px) {
+  /* >>>>>>>>  Learn From  <<<<<<<< */
+  .--learn--from-- h1 {
+    margin-bottom: 32px;
   }
 }
 
@@ -1541,9 +2270,28 @@ footer .container ul li:last-child {
 }
 
 /* >>>>>> Media Query / Width / 992px <<<<<<< */
-
 @media screen and (max-width: 992px) {
   /* >>>>>>>> Footer <<<<<<<< */
+  footer .container {
+    max-width: 900px;
+    overflow: hidden;
+    padding: 55px 20px 50px 20px;
+  }
+  footer .container .row .col-lg-3:nth-child(3),
+  footer .container .row .col-lg-3:last-child {
+    margin-top: 20px;
+  }
+}
+
+/* >>>>>> Media Query / Width / 620px <<<<<<< */
+@media screen and (max-width: 620px) {
+  /* >>>>>>>> Footer <<<<<<<< */
+  footer .container {
+    padding: 55px 30px 50px 30px;
+  }
+  footer .container .col-lg-3 {
+    padding: 0;
+  }
   footer .container .row .col-lg-3:nth-child(3),
   footer .container .row .col-lg-3:last-child {
     margin-top: 20px;
