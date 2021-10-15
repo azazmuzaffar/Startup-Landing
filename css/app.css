@@ -30,6 +30,10 @@
   font-family: "Lucida Handwriting";
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 /* >>>>>>>> Tagline <<<<<<<< */
 .--main-p-- {
   margin: 0;
@@ -100,7 +104,7 @@
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 99999;
   border-radius: 50%;
   cursor: pointer;
@@ -121,7 +125,7 @@
   left: 54.5%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   font-size: 33px;
@@ -147,7 +151,7 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .--navigation-- .navbar {
@@ -156,7 +160,7 @@
   top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   background: transparent;
   height: 100px;
   -webkit-transition: 0.3s;
@@ -211,7 +215,7 @@
   right: 22px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   display: none;
   cursor: pointer;
 }
@@ -238,7 +242,7 @@
 @media screen and (max-width: 991px) {
   /* >>>>>>>> Navbar <<<<<<<< */
   .--navigation-- .navbar {
-    height: 87px;
+    height: 83px;
   }
   .--navigation--.fixed .navbar {
     height: 65px;
@@ -285,7 +289,7 @@
   height: 100vh;
   background: rgba(0, 0, 0, 0.267);
   -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: -webkit-transform 200ms 260ms ease;
   transition: -webkit-transform 200ms 260ms ease;
   transition: transform 200ms 260ms ease;
@@ -295,7 +299,7 @@
 /* >>>> Show Mobile Navbar when Show class added <<<< */
 .--mobile--nav--.show {
   -webkit-transform: translateX(0%);
-  transform: translateX(0%);
+          transform: translateX(0%);
   -webkit-transition: -webkit-transform 200ms 260ms ease;
   transition: -webkit-transform 200ms 260ms ease;
   transition: transform 200ms 260ms ease;
@@ -304,8 +308,9 @@
 
 .--mobile--nav-- .--main-nav-- {
   position: relative;
-  width: 300px;
-  height: 100vh;
+  width: 320px;
+  height: 100%;
+  overflow: hidden;
   padding: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#e0f5fa), to(#fffde6));
   background: linear-gradient(-180deg, #e0f5fa 0%, #fffde6 100%);
@@ -314,7 +319,8 @@
 /* >>>>>>>> Will close the Mobile Menu <<<<<<<< */
 .--mobile--nav-- .--main-nav-- .--clost-it-- {
   position: absolute;
-  right: 20px;
+  right: 30px;
+  top: 29px;
   cursor: pointer;
 }
 
@@ -348,12 +354,14 @@
   padding: 12px;
   background: #02073e;
   color: white;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
   display: block;
   width: calc(100% - 60px);
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
+  border-radius: 3px;
 }
 
 /* >>>>>> Media Query / Width / 620px <<<<<<< */
@@ -459,7 +467,7 @@
   color: rgba(2, 7, 62, 0.4);
   border-radius: 8px;
   -webkit-box-shadow: 0px 10px 50px rgba(48, 98, 145, 0.08);
-  box-shadow: 0px 10px 50px rgba(48, 98, 145, 0.08);
+          box-shadow: 0px 10px 50px rgba(48, 98, 145, 0.08);
   padding: 0px 25px;
   font-size: 17px;
   border: 1px solid #ebebeb;
@@ -530,7 +538,7 @@
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 99999;
   border-radius: 50%;
   cursor: pointer;
@@ -551,7 +559,7 @@
   left: 54.5%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   font-size: 33px;
@@ -783,7 +791,7 @@
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 99;
   margin-top: 100px;
 }
@@ -896,7 +904,7 @@
 
 .--quality--features-- .--tutorials--:hover {
   -webkit-box-shadow: 0px 15px 50px rgba(69, 88, 157, 0.1);
-  box-shadow: 0px 15px 50px rgba(69, 88, 157, 0.1);
+          box-shadow: 0px 15px 50px rgba(69, 88, 157, 0.1);
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -1074,7 +1082,7 @@
 
 .--core--features-- .--box-- {
   -webkit-box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
-  box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
+          box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
   border-radius: 10px;
   width: 100%;
   height: -webkit-fit-content;
@@ -1183,8 +1191,8 @@
   }
   .--core--features-- .container .row {
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .--core--features-- .container .col-lg-5 {
     padding-top: 0px;
@@ -1212,8 +1220,8 @@
   }
   .--core--features-- .container .col-lg-5 {
     -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+        -ms-flex-order: 1;
+            order: 1;
     max-width: 600px;
     margin: 0 auto;
     margin-bottom: 80px !important;
@@ -1222,8 +1230,8 @@
   }
   .--core--features-- .container .col-lg-7 {
     -webkit-box-ordinal-group: 13;
-    -ms-flex-order: 12;
-    order: 12;
+        -ms-flex-order: 12;
+            order: 12;
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
@@ -1300,8 +1308,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* >>>>>>>>>> Courses <<<<<<< */
@@ -1318,7 +1326,7 @@
 
 .--designing-courses-- .--course--.active {
   -webkit-box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
-  box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
+          box-shadow: 0px 25px 100px rgba(69, 88, 157, 0.08);
 }
 
 .--designing-courses-- .--course-- .--video--and--course--details-- {
@@ -1327,8 +1335,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* >>>>>>>>>> Heading <<<<<<< */
@@ -1366,7 +1374,7 @@
   top: unset;
   left: unset;
   -webkit-transform: unset;
-  transform: unset;
+          transform: unset;
   background: rgba(239, 158, 72, 0.07);
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1428,7 +1436,7 @@
 
 .--designing-courses-- .--course--.active .--course-hours-- p i {
   -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .--designing-courses-- .--course-- .--course-hours-- .--btn-- {
@@ -1470,7 +1478,7 @@
   line-height: 18px;
   display: table-row;
   -webkit-animation: mymove 1s;
-  animation: mymove 1s;
+          animation: mymove 1s;
 }
 
 .--designing-courses-- .--course-- .--key-points-- ul li p {
@@ -1495,12 +1503,12 @@
   from {
     opacity: 0;
     -webkit-transform: translateY(-40%);
-    transform: translateY(-40%);
+            transform: translateY(-40%);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -1508,12 +1516,12 @@
   from {
     opacity: 0;
     -webkit-transform: translateY(-40%);
-    transform: translateY(-40%);
+            transform: translateY(-40%);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -1539,8 +1547,8 @@
   .--designing-courses-- .--courses-- {
     display: block;
     -webkit-box-align: unset;
-    -ms-flex-align: unset;
-    align-items: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
   .--designing-courses-- .--course-- .--key-points-- ul li p {
     line-height: 20px;
@@ -1580,8 +1588,8 @@
     text-align: left;
     display: block;
     -webkit-box-align: unset;
-    -ms-flex-align: unset;
-    align-items: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
   }
   /* >>> Separating rating and seen views <<< */
   #--break-- {
@@ -1594,6 +1602,7 @@
   }
   /* >>>>>>>> Video Play/Pause <<<<<<<< */
   .--designing-courses-- .--course-- .--video--tutorial-- {
+    margin: 0 auto;
     margin-bottom: 40px;
   }
   /* >>>>>>>>>> Heading <<<<<<< */
@@ -1628,6 +1637,15 @@
   }
 }
 
+@media screen and (max-width: 340px) {
+  .--designing-courses-- .--course-- .--course-hours-- .--btn-- {
+    padding: 15px 9px;
+  }
+  .--designing-courses-- .--course-- .--course-hours-- .--btn-- span {
+    padding: 0px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>> How It Works  <<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -1652,8 +1670,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1666,7 +1684,7 @@
   background: white;
   border-radius: 40%;
   -webkit-box-shadow: 0px 14px 20px rgba(76, 119, 171, 0.1);
-  box-shadow: 0px 14px 20px rgba(76, 119, 171, 0.1);
+          box-shadow: 0px 14px 20px rgba(76, 119, 171, 0.1);
   color: black;
   position: relative;
   margin-right: 10px;
@@ -1677,7 +1695,7 @@
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 30px;
   font-weight: 700;
 }
@@ -1799,7 +1817,7 @@
 .--pricing--plan-- .--btns-- ul li.active {
   background: white;
   -webkit-box-shadow: 0px 3px 3.8px rgba(38, 78, 118, 0.1);
-  box-shadow: 0px 3px 3.8px rgba(38, 78, 118, 0.1);
+          box-shadow: 0px 3px 3.8px rgba(38, 78, 118, 0.1);
 }
 
 /*>>>>>> Pricing Plan <<<<< */
@@ -1841,12 +1859,12 @@
 
 .--pricing--plan-- .--plans--.animate .--recommened-- {
   -webkit-animation: fade 1s;
-  animation: fade 1s;
+          animation: fade 1s;
 }
 
 .--pricing--plan-- .--plans--.animate2 .--recommened-- {
   -webkit-animation: fade2 1s;
-  animation: fade2 1s;
+          animation: fade2 1s;
 }
 
 .--pricing--plan-- .--plans-- .--plan-- h3 {
@@ -1859,12 +1877,12 @@
 
 .--pricing--plan-- .--plans--.animate h3 {
   -webkit-animation: fadeout 1.5s;
-  animation: fadeout 1.5s;
+          animation: fadeout 1.5s;
 }
 
 .--pricing--plan-- .--plans--.animate2 h3 {
   -webkit-animation: fadeout2 1.5s;
-  animation: fadeout2 1.5s;
+          animation: fadeout2 1.5s;
 }
 
 .--pricing--plan-- .--plans-- .--plan-- p {
@@ -1877,12 +1895,12 @@
 
 .--pricing--plan-- .--plans--.animate p {
   -webkit-animation: fadeout 1.5s;
-  animation: fadeout 1.5s;
+          animation: fadeout 1.5s;
 }
 
 .--pricing--plan-- .--plans--.animate2 p {
   -webkit-animation: fadeout2 1.5s;
-  animation: fadeout2 1.5s;
+          animation: fadeout2 1.5s;
 }
 
 /*>>>>>> Plan Free <<<<< */
@@ -1900,8 +1918,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 40px;
 }
 
@@ -1923,12 +1941,12 @@
 
 .--pricing--plan-- .--plans--.animate .--plan--.--premium-plan-- .--plan--price-- .--price-- h2 {
   -webkit-animation: fadeout 1.5s;
-  animation: fadeout 1.5s;
+          animation: fadeout 1.5s;
 }
 
 .--pricing--plan-- .--plans--.animate2 .--plan--.--premium-plan-- .--plan--price-- .--price-- h2 {
   -webkit-animation: fadeout2 1.5s;
-  animation: fadeout2 1.5s;
+          animation: fadeout2 1.5s;
 }
 
 /*>>>>>> Plan List Items <<<<< */
@@ -1952,12 +1970,12 @@
 
 .--pricing--plan-- .--plans--.animate .--plan-- ul li {
   -webkit-animation: fade 1s;
-  animation: fade 1s;
+          animation: fade 1s;
 }
 
 .--pricing--plan-- .--plans--.animate2 .--plan-- ul li {
   -webkit-animation: fade2 1s;
-  animation: fade2 1s;
+          animation: fade2 1s;
 }
 
 .--pricing--plan-- .--plans-- .--plan-- ul li::before {
@@ -2004,12 +2022,12 @@
 
 .--pricing--plan-- .--plans--.animate .--link-btn-- {
   -webkit-animation: fade 1s;
-  animation: fade 1s;
+          animation: fade 1s;
 }
 
 .--pricing--plan-- .--plans--.animate2 .--link-btn-- {
   -webkit-animation: fade2 1s;
-  animation: fade2 1s;
+          animation: fade2 1s;
 }
 
 /*>>>>>> Animations <<<<< */
@@ -2054,24 +2072,24 @@
   from {
     opacity: 0;
     -webkit-transform: translateY(40%);
-    transform: translateY(40%);
+            transform: translateY(40%);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 @keyframes fade {
   from {
     opacity: 0;
     -webkit-transform: translateY(40%);
-    transform: translateY(40%);
+            transform: translateY(40%);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -2080,24 +2098,24 @@
   from {
     opacity: 0;
     -webkit-transform: translateY(40%);
-    transform: translateY(40%);
+            transform: translateY(40%);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 @keyframes fade2 {
   from {
     opacity: 0;
     -webkit-transform: translateY(40%);
-    transform: translateY(40%);
+            transform: translateY(40%);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0%);
-    transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -2386,8 +2404,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .--about--us-- .container .--plus-minus-icon-- {
@@ -2404,7 +2422,7 @@
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: "Font Awesome 5 Free";
   font-size: 13px;
   font-weight: 600;

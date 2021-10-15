@@ -68,6 +68,7 @@ $(document).ready(function () {
   $(".--toggle-menu--").on("click", function () {
     $(".--mobile--nav--").addClass("show");
     $(".--nav-overlay--").addClass("show");
+    $("body").addClass("lock");
   });
 });
 
@@ -76,6 +77,16 @@ $(document).ready(function () {
   $(".--clost-it--").on("click", function () {
     $(".--mobile--nav--").removeClass("show");
     $(".--nav-overlay--").removeClass("show");
+    $("body").removeClass("lock");
+  });
+});
+
+/* BY Clicking on any of the list item it will remove the mobile navbar */
+$(document).ready(function () {
+  $(".--nav-list-- ul li").on("click", "a", function () {
+    $(".--mobile--nav--").removeClass("show");
+    $(".--nav-overlay--").removeClass("show");
+    $("body").removeClass("lock");
   });
 });
 
