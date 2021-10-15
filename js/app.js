@@ -9,7 +9,7 @@
 /* Make the navbar fixed on scroll > 200 */
 $(window).scroll(function () {
   var nav = $(".--navigation--");
-  var top = 100;
+  var top = 10;
   if ($(window).scrollTop() >= top) {
     nav.addClass("fixed");
   } else {
