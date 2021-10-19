@@ -81,6 +81,13 @@ $(document).ready(function () {
   });
 });
 
+/* Will Close Mobile Manu When Click Outside */
+function Hide() {
+  $(".--mobile--nav--").removeClass("show");
+  $(".--nav-overlay--").removeClass("show");
+  $("body").removeClass("lock");
+}
+
 /* BY Clicking on any of the list item it will remove the mobile navbar */
 $(document).ready(function () {
   $(".--nav-list-- ul li").on("click", "a", function () {
